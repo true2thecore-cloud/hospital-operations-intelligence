@@ -1,0 +1,4 @@
+source_key,type,owner_role,approved_location,meeting_key,expected_after_end_minutes,access_verified,enabled
+transcript,Teams VTT,Meeting organizer,REPLACE,plan_am,60,false,false
+vendor_trays,Email or living file,SPD supervisor,REPLACE,plan_am,60,false,false
+handoff,Forms response table,Charge nurse,REPLACE,plan_am,60,false,false

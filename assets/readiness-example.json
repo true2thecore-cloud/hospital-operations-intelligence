@@ -1,0 +1,854 @@
+{
+  "version": 2,
+  "siteKey": "example_hospital",
+  "siteLabel": "Example Hospital",
+  "datasetMode": "synthetic",
+  "date": "2027-01-22",
+  "asOfUtc": "2027-01-23T04:10:00Z",
+  "profileHash": "ed1ae87a1cfedb4f0c8aa475f44baa6b611c1997344743e78e0001706ac985d0",
+  "snapshot": {
+    "date": "2027-01-22",
+    "asOfUtc": "2027-01-23T04:10:00Z",
+    "metrics": {
+      "census": {
+        "appliesToDate": "2027-01-22",
+        "evidence": [
+          {
+            "locator": "Synthetic cue 1",
+            "sourceId": "synthetic-source"
+          }
+        ],
+        "field": "census",
+        "observedAt": "2027-01-22T21:00:00-05:00",
+        "value": 256,
+        "recordId": "2027-01-22-safety_pm",
+        "meetingKey": "safety_pm",
+        "receivedAt": "2027-01-23T04:01:00Z"
+      },
+      "or_cases": {
+        "appliesToDate": "2027-01-22",
+        "evidence": [
+          {
+            "locator": "Synthetic cue 1",
+            "sourceId": "synthetic-source"
+          }
+        ],
+        "field": "or_cases",
+        "observedAt": "2027-01-22T09:30:00-05:00",
+        "value": 28,
+        "recordId": "2027-01-22-plan_am",
+        "meetingKey": "plan_am",
+        "receivedAt": "2027-01-23T04:01:00Z"
+      }
+    },
+    "sevenDayConcerns": [
+      {
+        "action": "No further action stated",
+        "due": "Completed",
+        "eventDate": "2027-01-21",
+        "evidence": [
+          {
+            "locator": "Synthetic cue 1",
+            "sourceId": "synthetic-source"
+          }
+        ],
+        "issueId": "example-coverage",
+        "owner": "Unit lead",
+        "severity": "HIGH",
+        "state": "cleared",
+        "summary": "Coverage confirmed; earlier concern resolved.",
+        "recordId": "2027-01-22-plan_pm",
+        "meetingKey": "plan_pm",
+        "updatedAt": "2027-01-22T14:30:00-05:00",
+        "trackedSeverity": "HIGH"
+      }
+    ],
+    "openIssues": [],
+    "upcomingMetrics": []
+  },
+  "sheets": [
+    {
+      "name": "Executive Snapshot",
+      "mode": "refresh",
+      "headers": [
+        "Metric",
+        "Known value",
+        "Unit",
+        "Applies to",
+        "Observed at",
+        "Evidence"
+      ],
+      "rows": [
+        [
+          "Hospital census",
+          256,
+          "patients",
+          "2027-01-22",
+          "2027-01-22T21:00:00-05:00",
+          "synthetic-source @ Synthetic cue 1"
+        ],
+        [
+          "Capacity",
+          "Not stated",
+          "percent",
+          "",
+          "",
+          "No validated observation"
+        ],
+        [
+          "Anticipated discharges",
+          "Not stated",
+          "patients",
+          "",
+          "",
+          "No validated observation"
+        ],
+        [
+          "Early discharges identified",
+          "Not stated",
+          "patients",
+          "",
+          "",
+          "No validated observation"
+        ],
+        [
+          "OR cases",
+          28,
+          "cases",
+          "2027-01-22",
+          "2027-01-22T09:30:00-05:00",
+          "synthetic-source @ Synthetic cue 1"
+        ],
+        [
+          "OR bed demand",
+          "Not stated",
+          "beds",
+          "",
+          "",
+          "No validated observation"
+        ],
+        [
+          "Cath lab cases",
+          "Not stated",
+          "cases",
+          "",
+          "",
+          "No validated observation"
+        ],
+        [
+          "Escalation description",
+          "Not stated",
+          "",
+          "",
+          "",
+          "No validated observation"
+        ],
+        [
+          "Throughput risk reported",
+          "Not stated",
+          "",
+          "",
+          "",
+          "No validated observation"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "SEVEN-DAY HIGH / MEDIUM EVENTS",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Event date",
+          "Concern",
+          "Severity",
+          "Status",
+          "Owner / action",
+          "Evidence"
+        ],
+        [
+          "2027-01-21",
+          "Coverage confirmed; earlier concern resolved.",
+          "HIGH",
+          "cleared",
+          "Unit lead / No further action stated",
+          "2027-01-22-plan_pm | synthetic-source @ Synthetic cue 1"
+        ]
+      ],
+      "keys": []
+    },
+    {
+      "name": "Master Table",
+      "mode": "append",
+      "headers": [
+        "Date",
+        "census",
+        "capacity_pct",
+        "anticipated_discharges",
+        "early_discharges",
+        "or_cases",
+        "cardiac_cases",
+        "or_bed_demand",
+        "surgical_beds",
+        "intermediate_beds",
+        "medical_beds",
+        "specialty_beds",
+        "gyn_beds",
+        "neuro_icu_beds",
+        "cath_cases",
+        "cath_bed_demand",
+        "rn_required",
+        "tech_required",
+        "sitters_required",
+        "telemetry_demand",
+        "staffing_ratio",
+        "tray_readiness",
+        "escalation_description",
+        "throughput_risk",
+        "Concerns at close",
+        "Closed at",
+        "Source records",
+        "Metric provenance",
+        "Source coverage",
+        "Record hash"
+      ],
+      "rows": [
+        [
+          "2027-01-21",
+          250,
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          28,
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Coverage concern documented for receiving unit.",
+          "2027-01-22T04:05:00Z",
+          "2027-01-21-safety_am; 2027-01-21-plan_am; 2027-01-21-plan_pm; 2027-01-21-operations; 2027-01-21-safety_pm",
+          "{\"census\": {\"appliesToDate\": \"2027-01-21\", \"evidence\": [{\"locator\": \"Synthetic cue 1\", \"sourceId\": \"synthetic-source\"}], \"field\": \"census\", \"meetingKey\": \"safety_pm\", \"observedAt\": \"2027-01-21T21:00:00-05:00\", \"receivedAt\": \"2027-01-22T04:01:00Z\", \"recordId\": \"2027-01-21-safety_pm\", \"value\": 250}, \"or_cases\": {\"appliesToDate\": \"2027-01-21\", \"evidence\": [{\"locator\": \"Synthetic cue 1\", \"sourceId\": \"synthetic-source\"}], \"field\": \"or_cases\", \"meetingKey\": \"plan_am\", \"observedAt\": \"2027-01-21T09:30:00-05:00\", \"receivedAt\": \"2027-01-22T04:01:00Z\", \"recordId\": \"2027-01-21-plan_am\", \"value\": 28}}",
+          "[{\"meetingKey\": \"safety_am\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"plan_am\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"plan_pm\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"operations\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"safety_pm\", \"note\": \"\", \"status\": \"processed\"}]",
+          "45492f7bb6cb9a531910c39668f13b4c2da44624c6b6e0a01f30491762d077d5"
+        ],
+        [
+          "2027-01-22",
+          256,
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          28,
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "Not stated",
+          "",
+          "2027-01-23T04:05:00Z",
+          "2027-01-22-safety_am; 2027-01-22-plan_am; 2027-01-22-plan_pm; 2027-01-22-operations; 2027-01-22-safety_pm",
+          "{\"census\": {\"appliesToDate\": \"2027-01-22\", \"evidence\": [{\"locator\": \"Synthetic cue 1\", \"sourceId\": \"synthetic-source\"}], \"field\": \"census\", \"meetingKey\": \"safety_pm\", \"observedAt\": \"2027-01-22T21:00:00-05:00\", \"receivedAt\": \"2027-01-23T04:01:00Z\", \"recordId\": \"2027-01-22-safety_pm\", \"value\": 256}, \"or_cases\": {\"appliesToDate\": \"2027-01-22\", \"evidence\": [{\"locator\": \"Synthetic cue 1\", \"sourceId\": \"synthetic-source\"}], \"field\": \"or_cases\", \"meetingKey\": \"plan_am\", \"observedAt\": \"2027-01-22T09:30:00-05:00\", \"receivedAt\": \"2027-01-23T04:01:00Z\", \"recordId\": \"2027-01-22-plan_am\", \"value\": 28}}",
+          "[{\"meetingKey\": \"safety_am\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"plan_am\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"plan_pm\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"operations\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"safety_pm\", \"note\": \"\", \"status\": \"processed\"}]",
+          "6d735620c25cf0df5a3660f678796789bd79d582a2c7907e1e54790afe146991"
+        ]
+      ],
+      "keys": [
+        "2027-01-21",
+        "2027-01-22"
+      ]
+    },
+    {
+      "name": "Hand-Off Review",
+      "mode": "refresh",
+      "headers": [
+        "Issue ID",
+        "Event date",
+        "Concern",
+        "Severity",
+        "State",
+        "Owner",
+        "Action",
+        "Due",
+        "Evidence"
+      ],
+      "rows": [],
+      "keys": []
+    },
+    {
+      "name": "Source Audit Log",
+      "mode": "append",
+      "headers": [
+        "Audit ID",
+        "Date",
+        "Meeting",
+        "Source type",
+        "Status",
+        "Reference",
+        "Received",
+        "Reviewer"
+      ],
+      "rows": [
+        [
+          "2027-01-21-safety_am:synthetic-source",
+          "2027-01-21",
+          "safety_am",
+          "transcript",
+          "available",
+          "Synthetic fixture, not an operational source",
+          "2027-01-22T04:01:00Z",
+          "Synthetic reviewer"
+        ],
+        [
+          "2027-01-21-plan_am:synthetic-source",
+          "2027-01-21",
+          "plan_am",
+          "transcript",
+          "available",
+          "Synthetic fixture, not an operational source",
+          "2027-01-22T04:01:00Z",
+          "Synthetic reviewer"
+        ],
+        [
+          "2027-01-21-plan_pm:synthetic-source",
+          "2027-01-21",
+          "plan_pm",
+          "transcript",
+          "available",
+          "Synthetic fixture, not an operational source",
+          "2027-01-22T04:01:00Z",
+          "Synthetic reviewer"
+        ],
+        [
+          "2027-01-21-operations:synthetic-source",
+          "2027-01-21",
+          "operations",
+          "transcript",
+          "available",
+          "Synthetic fixture, not an operational source",
+          "2027-01-22T04:01:00Z",
+          "Synthetic reviewer"
+        ],
+        [
+          "2027-01-21-safety_pm:synthetic-source",
+          "2027-01-21",
+          "safety_pm",
+          "transcript",
+          "available",
+          "Synthetic fixture, not an operational source",
+          "2027-01-22T04:01:00Z",
+          "Synthetic reviewer"
+        ],
+        [
+          "2027-01-22-safety_am:synthetic-source",
+          "2027-01-22",
+          "safety_am",
+          "transcript",
+          "available",
+          "Synthetic fixture, not an operational source",
+          "2027-01-23T04:01:00Z",
+          "Synthetic reviewer"
+        ],
+        [
+          "2027-01-22-plan_am:synthetic-source",
+          "2027-01-22",
+          "plan_am",
+          "transcript",
+          "available",
+          "Synthetic fixture, not an operational source",
+          "2027-01-23T04:01:00Z",
+          "Synthetic reviewer"
+        ],
+        [
+          "2027-01-22-plan_pm:synthetic-source",
+          "2027-01-22",
+          "plan_pm",
+          "transcript",
+          "available",
+          "Synthetic fixture, not an operational source",
+          "2027-01-23T04:01:00Z",
+          "Synthetic reviewer"
+        ],
+        [
+          "2027-01-22-operations:synthetic-source",
+          "2027-01-22",
+          "operations",
+          "transcript",
+          "available",
+          "Synthetic fixture, not an operational source",
+          "2027-01-23T04:01:00Z",
+          "Synthetic reviewer"
+        ],
+        [
+          "2027-01-22-safety_pm:synthetic-source",
+          "2027-01-22",
+          "safety_pm",
+          "transcript",
+          "available",
+          "Synthetic fixture, not an operational source",
+          "2027-01-23T04:01:00Z",
+          "Synthetic reviewer"
+        ]
+      ],
+      "keys": [
+        "2027-01-21-safety_am:synthetic-source",
+        "2027-01-21-plan_am:synthetic-source",
+        "2027-01-21-plan_pm:synthetic-source",
+        "2027-01-21-operations:synthetic-source",
+        "2027-01-21-safety_pm:synthetic-source",
+        "2027-01-22-safety_am:synthetic-source",
+        "2027-01-22-plan_am:synthetic-source",
+        "2027-01-22-plan_pm:synthetic-source",
+        "2027-01-22-operations:synthetic-source",
+        "2027-01-22-safety_pm:synthetic-source"
+      ]
+    },
+    {
+      "name": "Issue History",
+      "mode": "append",
+      "headers": [
+        "Revision key",
+        "Event date",
+        "Meeting date",
+        "Meeting",
+        "Issue ID",
+        "Concern",
+        "Severity",
+        "State",
+        "Owner",
+        "Action",
+        "Evidence"
+      ],
+      "rows": [
+        [
+          "2027-01-21-plan_am:example-coverage",
+          "2027-01-21",
+          "2027-01-21",
+          "plan_am",
+          "example-coverage",
+          "Coverage concern documented for receiving unit.",
+          "HIGH",
+          "active",
+          "Unit lead",
+          "Confirm coverage",
+          "synthetic-source @ Synthetic cue 1"
+        ],
+        [
+          "2027-01-22-plan_am:example-coverage",
+          "2027-01-21",
+          "2027-01-22",
+          "plan_am",
+          "example-coverage",
+          "Coverage concern documented for receiving unit.",
+          "HIGH",
+          "active",
+          "Unit lead",
+          "Confirm coverage",
+          "synthetic-source @ Synthetic cue 1"
+        ],
+        [
+          "2027-01-22-plan_pm:example-coverage",
+          "2027-01-21",
+          "2027-01-22",
+          "plan_pm",
+          "example-coverage",
+          "Coverage confirmed; earlier concern resolved.",
+          "HIGH",
+          "cleared",
+          "Unit lead",
+          "No further action stated",
+          "synthetic-source @ Synthetic cue 1"
+        ]
+      ],
+      "keys": [
+        "2027-01-21-plan_am:example-coverage",
+        "2027-01-22-plan_am:example-coverage",
+        "2027-01-22-plan_pm:example-coverage"
+      ]
+    },
+    {
+      "name": "2027-01-21 safety_am 5250c533",
+      "mode": "refresh",
+      "headers": [
+        "Field / issue",
+        "Value / concern",
+        "Date / start",
+        "Observed / status",
+        "Record / action",
+        "Evidence / note"
+      ],
+      "rows": [
+        [
+          "Meeting",
+          "safety_am",
+          "2027-01-21T08:30:00-05:00",
+          "processed",
+          "2027-01-21-safety_am",
+          ""
+        ],
+        [
+          "census",
+          250,
+          "2027-01-21",
+          "2027-01-21T08:45:00-05:00",
+          "",
+          "synthetic-source @ Synthetic cue 1"
+        ]
+      ],
+      "keys": []
+    },
+    {
+      "name": "2027-01-21 plan_am 35c2e46a",
+      "mode": "refresh",
+      "headers": [
+        "Field / issue",
+        "Value / concern",
+        "Date / start",
+        "Observed / status",
+        "Record / action",
+        "Evidence / note"
+      ],
+      "rows": [
+        [
+          "Meeting",
+          "plan_am",
+          "2027-01-21T09:15:00-05:00",
+          "processed",
+          "2027-01-21-plan_am",
+          ""
+        ],
+        [
+          "census",
+          250,
+          "2027-01-21",
+          "2027-01-21T09:30:00-05:00",
+          "",
+          "synthetic-source @ Synthetic cue 1"
+        ],
+        [
+          "or_cases",
+          28,
+          "2027-01-21",
+          "2027-01-21T09:30:00-05:00",
+          "",
+          "synthetic-source @ Synthetic cue 1"
+        ],
+        [
+          "example-coverage",
+          "Coverage concern documented for receiving unit.",
+          "2027-01-21",
+          "HIGH / active",
+          "Unit lead / Confirm coverage",
+          "synthetic-source @ Synthetic cue 1"
+        ]
+      ],
+      "keys": []
+    },
+    {
+      "name": "2027-01-21 plan_pm bf92124b",
+      "mode": "refresh",
+      "headers": [
+        "Field / issue",
+        "Value / concern",
+        "Date / start",
+        "Observed / status",
+        "Record / action",
+        "Evidence / note"
+      ],
+      "rows": [
+        [
+          "Meeting",
+          "plan_pm",
+          "2027-01-21T14:15:00-05:00",
+          "processed",
+          "2027-01-21-plan_pm",
+          ""
+        ],
+        [
+          "census",
+          250,
+          "2027-01-21",
+          "2027-01-21T14:30:00-05:00",
+          "",
+          "synthetic-source @ Synthetic cue 1"
+        ]
+      ],
+      "keys": []
+    },
+    {
+      "name": "2027-01-21 operations b2a9cd79",
+      "mode": "refresh",
+      "headers": [
+        "Field / issue",
+        "Value / concern",
+        "Date / start",
+        "Observed / status",
+        "Record / action",
+        "Evidence / note"
+      ],
+      "rows": [
+        [
+          "Meeting",
+          "operations",
+          "2027-01-21T16:00:00-05:00",
+          "processed",
+          "2027-01-21-operations",
+          ""
+        ],
+        [
+          "census",
+          250,
+          "2027-01-21",
+          "2027-01-21T16:00:00-05:00",
+          "",
+          "synthetic-source @ Synthetic cue 1"
+        ]
+      ],
+      "keys": []
+    },
+    {
+      "name": "2027-01-21 safety_pm 2a8a2d5e",
+      "mode": "refresh",
+      "headers": [
+        "Field / issue",
+        "Value / concern",
+        "Date / start",
+        "Observed / status",
+        "Record / action",
+        "Evidence / note"
+      ],
+      "rows": [
+        [
+          "Meeting",
+          "safety_pm",
+          "2027-01-21T21:00:00-05:00",
+          "processed",
+          "2027-01-21-safety_pm",
+          ""
+        ],
+        [
+          "census",
+          250,
+          "2027-01-21",
+          "2027-01-21T21:00:00-05:00",
+          "",
+          "synthetic-source @ Synthetic cue 1"
+        ]
+      ],
+      "keys": []
+    },
+    {
+      "name": "2027-01-22 safety_am d1150fa5",
+      "mode": "refresh",
+      "headers": [
+        "Field / issue",
+        "Value / concern",
+        "Date / start",
+        "Observed / status",
+        "Record / action",
+        "Evidence / note"
+      ],
+      "rows": [
+        [
+          "Meeting",
+          "safety_am",
+          "2027-01-22T08:30:00-05:00",
+          "processed",
+          "2027-01-22-safety_am",
+          ""
+        ],
+        [
+          "census",
+          256,
+          "2027-01-22",
+          "2027-01-22T08:45:00-05:00",
+          "",
+          "synthetic-source @ Synthetic cue 1"
+        ]
+      ],
+      "keys": []
+    },
+    {
+      "name": "2027-01-22 plan_am 19c85d23",
+      "mode": "refresh",
+      "headers": [
+        "Field / issue",
+        "Value / concern",
+        "Date / start",
+        "Observed / status",
+        "Record / action",
+        "Evidence / note"
+      ],
+      "rows": [
+        [
+          "Meeting",
+          "plan_am",
+          "2027-01-22T09:15:00-05:00",
+          "processed",
+          "2027-01-22-plan_am",
+          ""
+        ],
+        [
+          "census",
+          256,
+          "2027-01-22",
+          "2027-01-22T09:30:00-05:00",
+          "",
+          "synthetic-source @ Synthetic cue 1"
+        ],
+        [
+          "or_cases",
+          28,
+          "2027-01-22",
+          "2027-01-22T09:30:00-05:00",
+          "",
+          "synthetic-source @ Synthetic cue 1"
+        ],
+        [
+          "example-coverage",
+          "Coverage concern documented for receiving unit.",
+          "2027-01-21",
+          "HIGH / active",
+          "Unit lead / Confirm coverage",
+          "synthetic-source @ Synthetic cue 1"
+        ]
+      ],
+      "keys": []
+    },
+    {
+      "name": "2027-01-22 plan_pm ea734407",
+      "mode": "refresh",
+      "headers": [
+        "Field / issue",
+        "Value / concern",
+        "Date / start",
+        "Observed / status",
+        "Record / action",
+        "Evidence / note"
+      ],
+      "rows": [
+        [
+          "Meeting",
+          "plan_pm",
+          "2027-01-22T14:15:00-05:00",
+          "processed",
+          "2027-01-22-plan_pm",
+          ""
+        ],
+        [
+          "census",
+          256,
+          "2027-01-22",
+          "2027-01-22T14:30:00-05:00",
+          "",
+          "synthetic-source @ Synthetic cue 1"
+        ],
+        [
+          "example-coverage",
+          "Coverage confirmed; earlier concern resolved.",
+          "2027-01-21",
+          "HIGH / cleared",
+          "Unit lead / No further action stated",
+          "synthetic-source @ Synthetic cue 1"
+        ]
+      ],
+      "keys": []
+    },
+    {
+      "name": "2027-01-22 operations e99325ae",
+      "mode": "refresh",
+      "headers": [
+        "Field / issue",
+        "Value / concern",
+        "Date / start",
+        "Observed / status",
+        "Record / action",
+        "Evidence / note"
+      ],
+      "rows": [
+        [
+          "Meeting",
+          "operations",
+          "2027-01-22T16:00:00-05:00",
+          "processed",
+          "2027-01-22-operations",
+          ""
+        ],
+        [
+          "census",
+          256,
+          "2027-01-22",
+          "2027-01-22T16:00:00-05:00",
+          "",
+          "synthetic-source @ Synthetic cue 1"
+        ]
+      ],
+      "keys": []
+    },
+    {
+      "name": "2027-01-22 safety_pm bcb71e65",
+      "mode": "refresh",
+      "headers": [
+        "Field / issue",
+        "Value / concern",
+        "Date / start",
+        "Observed / status",
+        "Record / action",
+        "Evidence / note"
+      ],
+      "rows": [
+        [
+          "Meeting",
+          "safety_pm",
+          "2027-01-22T21:00:00-05:00",
+          "processed",
+          "2027-01-22-safety_pm",
+          ""
+        ],
+        [
+          "census",
+          256,
+          "2027-01-22",
+          "2027-01-22T21:00:00-05:00",
+          "",
+          "synthetic-source @ Synthetic cue 1"
+        ]
+      ],
+      "keys": []
+    }
+  ]
+}

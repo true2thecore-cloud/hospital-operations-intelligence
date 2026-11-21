@@ -1,0 +1,4 @@
+meeting_key,question,field_key,type,unit,applies_to_date_rule,destination,source_rule,missing_rule
+plan_am,How many cases are planned?,or_cases,number,cases,Explicit operating date,Master Table.or_cases,Reviewed transcript with timestamp,Leave unknown; retain dated prior observation
+plan_am,Are vendor trays ready?,tray_readiness,text,,Explicit operating date,Meeting sheet and executive metric,Configured SPD report or reviewed transcript,Do not infer readiness
+operations,What changed in receiving capacity?,capacity_pct,number,percent,Explicit operating date,Master Table.capacity_pct,Reviewed meeting observation,Keep AM and PM evidence separate

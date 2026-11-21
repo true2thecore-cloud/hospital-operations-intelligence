@@ -1,5 +1,7 @@
 # Data contracts, version 1
 
+For the complete version-2 readiness workbook workflow, start with [Readiness quickstart](READINESS-QUICKSTART.md). The instructions below describe the retained version-1 baseline unless stated otherwise.
+
 ## Meeting intake sidecar
 
 ```json

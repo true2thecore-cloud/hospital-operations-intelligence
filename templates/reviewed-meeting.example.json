@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "id": "example-plan-am-2027-01-22-r1",
+  "date": "2027-01-22",
+  "meetingKey": "plan_am",
+  "startsAt": "2027-01-22T09:00:00-05:00",
+  "endsAt": "2027-01-22T09:30:00-05:00",
+  "status": "processed",
+  "reviewerRole": "Example reviewer",
+  "sources": [
+    {
+      "id": "example-vtt",
+      "type": "transcript",
+      "status": "available",
+      "reference": "examples/readiness.vtt"
+    }
+  ],
+  "metrics": [
+    {
+      "field": "or_cases",
+      "value": 28,
+      "observedAt": "2027-01-22T09:05:00-05:00",
+      "appliesToDate": "2027-01-22",
+      "evidence": [
+        {
+          "sourceId": "example-vtt",
+          "locator": "00:00:01.000"
+        }
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "issueId": "example-tray-01",
+      "eventDate": "2027-01-22",
+      "summary": "Vendor tray arrival remains unconfirmed.",
+      "severity": "MEDIUM",
+      "state": "active",
+      "owner": "SPD lead",
+      "action": "Confirm delivery before the next checkpoint.",
+      "due": "14:00 local",
+      "surgeonKey": "surgeon_example",
+      "blockKey": "friday_3",
+      "evidence": [
+        {
+          "sourceId": "example-vtt",
+          "locator": "00:00:05.000"
+        }
+      ]
+    }
+  ]
+}

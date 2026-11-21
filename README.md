@@ -1,104 +1,61 @@
 # Hospital Operations Intelligence
 
-**A configurable meeting memory and follow-through system for hospital leaders.** Connect morning plans, afternoon updates, staffing snapshots and charge nurse handoffs. Preserve the evidence, carry unresolved concerns forward, and examine which combinations of concerns preceded later outcomes.
+**Configurable meeting-to-workbook operations intelligence, with a surgical operations worked example.** Preserve meeting evidence, update the executive view, retain permanent daily records and prepare role-specific briefs.
 
 ## Start here
 
-**New to this project? Open the [Start Here guide](docs/START-HERE.md).** It walks leaders and technical partners through what works now, what needs configuration, how to try the example, and how to connect an organization's own data. Optional agents and spoken briefings are clearly separated from included capabilities. Downloading the repository does not automatically create Microsoft connections, agents or flows.
+**Open [Start Here](docs/START-HERE.md)** for the leader and technical setup paths. The package includes working local software, Excel templates, Office Scripts, detailed prompt/skill templates and tenant build instructions. Downloading it does not authenticate accounts or install cloud agents.
 
-Companion: [Charge Nurse Handoff Dashboard](https://github.com/true2thecore-cloud/charge-nurse-handoff-dashboard). Both repositories are initially private for owner review. Links require access until their owner publishes them.
+![Readiness executive snapshot, synthetic example](assets/readiness-preview.png)
 
-![Synthetic operations brief](assets/operations-preview.png)
+## What is available
 
-## Try the complete example
+| Capability | Status |
+| --- | --- |
+| Organizational setup questionnaire | Runnable locally; creates configuration and one extraction template per selected meeting. |
+| Reviewed meeting metrics and issues | Typed fields, operating dates, source references, revisions and explicit source status. |
+| Executive Snapshot | Refreshed known values with dates; rolling seven-calendar-day HIGH/MEDIUM events, including resolved events until expiry. |
+| Master Table | One immutable row per closed date, after configured closing time and meeting processing checks. |
+| Meeting and issue history | Dated meeting sheets, append-only issue revisions, source audit and unresolved handoff. |
+| OR block context | Versioned dated schedule with previous surgeon session and prior-month matching block lookbacks. |
+| Local refresh worker | Imports reviewed files, refreshes workbook payloads and attempts daily close. Requires an approved running computer. |
+| Microsoft connections | Detailed tenant configuration recipes, action/connection maps and a clearly labeled optional API scaffold. Not deployed automatically. |
+| Executive and frontline briefs | Full reusable prompts and skills. AI execution, notifications and spoken delivery require optional configured services. |
+| Department federation | Optional architecture guidance, not a deployed shared multi-agent service. |
 
-Download this repository with **Code → Download ZIP**, extract it, and open a terminal in the extracted folder. Use Python 3.11 or newer, approved for your environment. The core has no third-party Python dependencies.
+## Templates and complete walkthrough
+
+- [Readiness workbook quickstart](docs/READINESS-QUICKSTART.md)
+- [Blank operational workbook](templates/Daily%20Operational%20Readiness.xlsx)
+- [Populated synthetic workbook](assets/Readiness%20Synthetic%20Example.xlsx)
+- [Organization onboarding](docs/ONBOARDING.md)
+- [Full workflow and record rules](docs/WORKFLOW-SPECIFICATION.md)
+- [Automation setup](docs/AUTOMATION-SETUP.md)
+- [Validation and acceptance](docs/VALIDATION.md)
+- [Source-design traceability](docs/SOURCE-TRACEABILITY.md)
+
+Use approved Python 3.11+ and named-timezone support (Windows may need approved `tzdata`). From the extracted repository:
 
 ```powershell
-python -m hospital_ops demo
+python -m hospital_ops.configure
+python -m hospital_ops.readiness_demo
 ```
 
-Open `data/demo/brief.html`. The demo creates 15 weekdays of invented meeting evidence, reviewed concerns and later outcomes. All examples use role placeholders. It also creates report JSON, a CSV issue register and an exploratory evaluation report.
+The first command asks local setup questions; the second creates an isolated invented example. Neither reads your email/calendar or sends messages.
 
-For a browser-based workbench:
+## Connection to staffing and charge handoff
 
-```powershell
-python -m hospital_ops --config data/demo/site.json --db data/demo/operations.sqlite serve
-```
+[Charge Nurse Handoff Dashboard](https://github.com/true2thecore-cloud/charge-nurse-handoff-dashboard) remains the frontline companion for Forms, staffing and assigned hours. Its staffing export preserves A1:L46 and Friday-to-Monday date handling. [Companion connection](docs/COMPANION.md) explains the bridge. Private repository links require owner-granted access.
 
-Open `http://127.0.0.1:8765` and select **2027-01-22** for the demonstration. Do not put real data in the synthetic database.
+The new readiness workflow uses version-2 reviewed records and a dedicated readiness database. The earlier version-1 VTT/workbench/issue-pattern engine remains available through [Portable setup](docs/PORTABLE-SETUP.md), [Microsoft setup](docs/MICROSOFT-365.md) and [Data contracts](docs/DATA-CONTRACTS.md). Their record formats are distinct. Do not relabel an old review as version 2; map and review the additional metric/source fields explicitly.
 
-## What is included
-
-| Capability | Included behavior |
-| --- | --- |
-| Configurable meeting sequence | Safety huddle, 9 AM Plan Ahead, 2 PM follow-up and operations huddle, with editable times and report-out roles. |
-| Transcript intake | Manual VTT upload, command-line import, approved-folder watcher and optional Microsoft Graph retrieval for a specified meeting. |
-| Evidence review | Timestamped cues, speaker attribution when present, keyword mention suggestions, and human-reviewed structured observations. |
-| Operational memory | Local SQLite history, immutable source records, review revisions, stable issue IDs and explicit resolution. |
-| Early-warning review | Configured combinations of confirmed signals, earlier comparable-day counts, baseline counts and missing-outcome counts. |
-| Evaluation | Chronological walk-forward evaluation using only evidence available at each checkpoint. |
-| Reports | Self-contained HTML brief, report JSON, Excel-friendly CSV and an Office Script for a dedicated Operations View. |
-| Staffing connection | Accepts the companion's A1:L46 staffing snapshot and Forms response-table snapshot. |
-| Microsoft setup | Detailed Power Automate, Teams transcript and Copilot Studio instructions with a manual route for restricted environments. |
-
-This release does **not** train an LLM, automatically understand all clinical language, or provide validated outcome probabilities. Keyword matches are review suggestions only. The confirmed structured history supports exploratory comparisons; local outcome definitions and prospective validation are needed before relying on forecasts. [How learning and evaluation work](docs/LEARNING.md).
-
-## Choose your setup
-
-| Your environment | Start here |
-| --- | --- |
-| You can upload files and run approved Python | [Portable setup](docs/PORTABLE-SETUP.md) |
-| You use Microsoft 365 and want automated intake | [Microsoft 365 and Power Automate](docs/MICROSOFT-365.md) |
-| You want an agent to draft meeting observations | [Copilot Studio setup](docs/COPILOT-STUDIO.md) |
-| Python cannot run in your organization | Use the manual structured meeting templates and your existing Excel dashboard. The full historical engine needs an approved worker or equivalent IT deployment. The repository does not create that permission. |
-| You already use the charge nurse dashboard | [Companion connection](docs/COMPANION.md) |
-
-## The daily workflow
-
-```mermaid
-flowchart LR
-  A[VTT or approved Teams retrieval] --> B[Timestamped source evidence]
-  B --> C[Draft observations and human review]
-  C --> D[Meeting history and issue ledger]
-  S[Staffing and handoff snapshots] --> D
-  D --> E[Leadership brief and Operations View]
-  D --> F[Later outcomes]
-  F --> G[Comparable history and evaluation]
-  G --> E
-```
-
-The morning meeting identifies constraints and assigns follow-up. The afternoon meeting updates those same issue IDs and records outcomes. A concern is closed only when reviewed evidence says it is resolved. A missing transcript or an unmentioned outcome stays unknown.
-
-## Templates and customization
-
-- [Morning Plan Ahead](templates/morning-plan-ahead.md)
-- [Afternoon Plan Ahead](templates/afternoon-plan-ahead.md)
-- [Meeting register](templates/meeting-register.csv)
-- [Outcome register](templates/outcome-register.csv)
-- [Site configuration](config/site.example.json)
-- [Reviewed observation example](templates/review.example.json)
-- [Customization guide](docs/CUSTOMIZATION.md)
-- [Data contracts](docs/DATA-CONTRACTS.md)
-
-Change the hospital label, leader role, department structure, meeting order, signals, outcomes and rule thresholds. Times are examples. The supplied perioperative agendas are an operational structure, not a replacement for local clinical policy.
-
-## Data stays under your control
-
-The portable workbench binds only to `127.0.0.1` and does not send data to an AI provider. Operational files belong in your approved private storage, outside Git. The optional Graph adapter reads transcripts using an access token you obtain through your organization's approved process. Copilot prompts and flow instructions are configuration material, not automatically installed agents or authenticated connections. See [data handling](docs/DATA-HANDLING.md).
-
-## Validate your copy
+## Validation and boundaries
 
 ```powershell
 python -m unittest discover -s tests -v
+node --test tests/office.test.mjs tests/readiness-office.test.mjs
 ```
 
-For the Office Script behavior tests, use Node.js 24+:
+Examples are synthetic. Local tests and workbook rendering do not verify live tenant permissions, cloud flows or production outcomes. Historical associations are context, not validated forecasts. Source records and operational identities stay in organization-approved private storage, outside Git. The local stores are single-writer, not a hospital-wide hosted service.
 
-```powershell
-node --test tests/office.test.mjs
-```
-
-Tests cover timestamped VTT parsing, duplicate protection, evidence validation, review revisions, future-information exclusion, unknown outcomes, staffing date rules, snapshot validation, safe rendering and the synthetic end-to-end workflow. The GitHub workflow runs the core tests on Windows and Linux. Live tenant permissions, Power Automate flows and Graph consent must be tested in your organization.
-
-MIT licensed. Version 0.1.0. [Troubleshooting](docs/TROUBLESHOOTING.md) · [Implementation boundaries](docs/ARCHITECTURE.md).
+MIT licensed. Version 0.2.0. [Change log](CHANGELOG.md).

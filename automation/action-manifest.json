@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "actions": [
+    {
+      "name": "DiscoverApprovedSources",
+      "implementation": "Tenant flow to configure",
+      "input": [
+        "approvedScope",
+        "targetDate"
+      ],
+      "output": [
+        "foundSourcesJson",
+        "missingSourcesJson"
+      ]
+    },
+    {
+      "name": "DeliverMeetingTranscript",
+      "implementation": "Tenant flow to configure",
+      "input": [
+        "meetingOccurrence",
+        "scheduledEnd",
+        "delayMinutes"
+      ],
+      "output": [
+        "status",
+        "sourceReference"
+      ]
+    },
+    {
+      "name": "DraftMeetingExtraction",
+      "implementation": "Approved AI prompt plus human review",
+      "input": [
+        "meetingProfile",
+        "numberedEvidence"
+      ],
+      "output": [
+        "draftJson",
+        "reviewChecklist"
+      ]
+    },
+    {
+      "name": "ImportReviewedMeeting",
+      "implementation": "python -m hospital_ops.readiness ingest",
+      "input": [
+        "reviewedRecord"
+      ],
+      "output": [
+        "id",
+        "receivedAt"
+      ]
+    },
+    {
+      "name": "CloseDailyRecord",
+      "implementation": "python -m hospital_ops.readiness close",
+      "input": [
+        "date"
+      ],
+      "output": [
+        "immutableDailyRecord"
+      ]
+    },
+    {
+      "name": "PublishReadinessWorkbook",
+      "implementation": "UpdateReadinessWorkbook.ts",
+      "input": [
+        "payloadJson"
+      ],
+      "output": [
+        "status",
+        "date",
+        "sheets"
+      ]
+    },
+    {
+      "name": "SendConfirmationOrBrief",
+      "implementation": "Optional tenant flow to configure",
+      "input": [
+        "verifiedSaveResult",
+        "recipient",
+        "optIn"
+      ],
+      "output": [
+        "deliveryStatus"
+      ]
+    }
+  ]
+}

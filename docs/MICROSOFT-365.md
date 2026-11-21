@@ -1,5 +1,7 @@
 # Microsoft 365 and Power Automate setup
 
+For the complete version-2 readiness workbook workflow, start with [Readiness quickstart](READINESS-QUICKSTART.md). The instructions below describe the retained version-1 baseline unless stated otherwise.
+
 This path connects cloud intake to the portable engine, then writes the resulting brief into Excel. It does not require an OpenAI API key. Copilot Studio is optional for drafting structured observations.
 
 ## Choose the deployment route

@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "implementation": "Tenant configuration recipe, not installed connections",
+  "connections": [
+    {
+      "key": "calendar",
+      "scope": "User-confirmed sources only",
+      "enabled": false,
+      "accessVerified": false
+    },
+    {
+      "key": "outlook",
+      "scope": "User-confirmed sources only",
+      "enabled": false,
+      "accessVerified": false
+    },
+    {
+      "key": "teams",
+      "scope": "User-confirmed sources only",
+      "enabled": false,
+      "accessVerified": false
+    },
+    {
+      "key": "onedrive",
+      "scope": "User-confirmed sources only",
+      "enabled": false,
+      "accessVerified": false
+    },
+    {
+      "key": "sharepoint",
+      "scope": "User-confirmed sources only",
+      "enabled": false,
+      "accessVerified": false
+    },
+    {
+      "key": "excel",
+      "scope": "User-confirmed sources only",
+      "enabled": false,
+      "accessVerified": false
+    },
+    {
+      "key": "graph",
+      "scope": "User-confirmed sources only",
+      "enabled": false,
+      "accessVerified": false
+    }
+  ],
+  "rules": {
+    "primaryWorkbook": "One approved location",
+    "sourcePrecedence": "Explicit reviewed corrections retain both source references",
+    "notifications": "Opt-in only"
+  }
+}

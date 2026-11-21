@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "kind": "Build recipe, not an importable Power Platform solution",
+  "stages": [
+    {
+      "order": 1,
+      "name": "Confirm sources and meetings",
+      "trigger": "Explicit setup"
+    },
+    {
+      "order": 2,
+      "name": "Check transcript",
+      "trigger": "Scheduled meeting end plus configurable delay, default 60 minutes"
+    },
+    {
+      "order": 3,
+      "name": "Deliver VTT or missing-source status",
+      "trigger": "Retrieval result"
+    },
+    {
+      "order": 4,
+      "name": "Extract configured fields",
+      "trigger": "New source identity"
+    },
+    {
+      "order": 5,
+      "name": "Review and import",
+      "trigger": "Reviewer approval"
+    },
+    {
+      "order": 6,
+      "name": "Refresh executive and meeting views",
+      "trigger": "Successful import"
+    },
+    {
+      "order": 7,
+      "name": "Close daily master row",
+      "trigger": "Closing time and expected meetings terminal"
+    },
+    {
+      "order": 8,
+      "name": "Verify workbook save",
+      "trigger": "Successful publication"
+    },
+    {
+      "order": 9,
+      "name": "Notify or brief",
+      "trigger": "Enabled preference and verified result"
+    }
+  ],
+  "retry": {
+    "maxAttempts": 2,
+    "onFailure": "Report failure; never report successful workbook save"
+  }
+}

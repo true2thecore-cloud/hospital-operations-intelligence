@@ -13,3 +13,5 @@ config/site.local.json
 *.log
 node_modules/
 
+config/readiness.local.json
+*.inspect.ndjson

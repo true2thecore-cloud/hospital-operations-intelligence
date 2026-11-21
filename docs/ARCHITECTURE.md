@@ -1,5 +1,7 @@
 # Architecture and boundaries
 
+For the complete version-2 readiness workbook workflow, start with [Readiness quickstart](READINESS-QUICKSTART.md). The instructions below describe the retained version-1 baseline unless stated otherwise.
+
 | Layer | Implementation | Boundary |
 | --- | --- | --- |
 | Intake | VTT parser, Graph adapter, folder watcher | Does not discover all meetings or acquire tenant credentials automatically. |

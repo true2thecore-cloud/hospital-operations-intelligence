@@ -38,3 +38,7 @@ Snapshots provide context. They do not automatically become reviewed meeting sig
 Import the core's report JSON with `scripts/ImportOperationsBrief.ts`. It creates or updates only a marked, dedicated Operations View. If an existing sheet has unrelated contents, it stops. Keep the default name or choose a new dedicated sheet.
 
 The first repo does not need to be changed. Create the intake/export and publication steps in your tenant, with one coordinated writer for the combined Excel workbook. A repository link alone does not authenticate or connect files.
+
+## Readiness workbook extension (version 2)
+
+The full readiness workflow adds executive/current views and immutable daily records. Keep the dashboard scripts and export contracts unchanged. Supply relevant snapshot evidence to a reviewer and map the validated fields into version-2 records using [the readiness profile](../config/readiness.example.json). Preserve the assignment date and receipt time; a new snapshot alone is not a confirmed risk. [Readiness quickstart](READINESS-QUICKSTART.md).

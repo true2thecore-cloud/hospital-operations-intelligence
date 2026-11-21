@@ -1,5 +1,7 @@
 # Portable setup
 
+For the complete version-2 readiness workbook workflow, start with [Readiness quickstart](READINESS-QUICKSTART.md). The instructions below describe the retained version-1 baseline unless stated otherwise.
+
 ## 1. Prepare a private workspace
 
 Download and extract the repository. Use an approved Python 3.11+ installation. Open PowerShell or a terminal in the extracted repository folder. If `python` is not found on Windows, your approved installation may use `py -3` instead.

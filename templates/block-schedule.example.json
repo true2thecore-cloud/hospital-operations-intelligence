@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "versions": [
+    {
+      "id": "example-jan",
+      "effectiveFrom": "2027-01-01",
+      "effectiveTo": "2027-01-31",
+      "sessions": [
+        {
+          "date": "2027-01-15",
+          "surgeonKey": "surgeon_example",
+          "blockKey": "friday_3",
+          "service": "Example service"
+        }
+      ]
+    },
+    {
+      "id": "example-feb",
+      "effectiveFrom": "2027-02-01",
+      "effectiveTo": "2027-02-28",
+      "sessions": [
+        {
+          "date": "2027-02-19",
+          "surgeonKey": "surgeon_example",
+          "blockKey": "friday_3",
+          "service": "Example service"
+        }
+      ]
+    }
+  ]
+}

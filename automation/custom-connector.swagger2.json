@@ -1,0 +1,111 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Configurable readiness actions scaffold",
+    "version": "0.2.0",
+    "description": "Design only. Implement authenticated endpoints and replace host before use."
+  },
+  "host": "REPLACE_WITH_APPROVED_HOST",
+  "basePath": "/api",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/getDailySources": {
+      "post": {
+        "operationId": "GetDailyOperationalSources",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "targetDate": {
+                  "type": "string"
+                },
+                "approvedScopeJson": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Actual action result, not acceptance disguised as completion",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string"
+                },
+                "success": {
+                  "type": "boolean"
+                },
+                "resultJson": {
+                  "type": "string"
+                },
+                "errorMessage": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/updateWorkbook": {
+      "post": {
+        "operationId": "UpdateReadinessWorkbook",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "payloadJson": {
+                  "type": "string"
+                },
+                "workbookReference": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Actual action result, not acceptance disguised as completion",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string"
+                },
+                "success": {
+                  "type": "boolean"
+                },
+                "resultJson": {
+                  "type": "string"
+                },
+                "errorMessage": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,7 @@
 # Copilot Studio setup path
 
+For the complete version-2 readiness workbook workflow, start with [Readiness quickstart](READINESS-QUICKSTART.md). The instructions below describe the retained version-1 baseline unless stated otherwise.
+
 Copilot Studio can help turn a transcript into a structured **draft** and produce audience-specific narratives. The deterministic core owns historical records, rule comparisons and evaluation. Uploading prompt files alone does not install connectors or create persistent operational memory.
 
 ## 1. Define the agent
