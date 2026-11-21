@@ -21,6 +21,7 @@ This specification preserves the original surgical operations workflow while rep
 | Issue History | Append every reviewed issue revision with record identity, event date, status and evidence. |
 | Hand-Off Review | Current unresolved issues, including those older than seven days. Explicit resolution required. |
 | Source Audit Log | Append source status for each reviewed revision. Distinguish missing, pending, denied and not applicable. |
+| Audit Details | Generated reading view for long cell text. Continuation parts preserve the full text and identify the source sheet, cell and field. Refreshing this view never changes the original historical values. |
 
 The closed daily summary includes concerns raised or updated that day, including resolved concerns, plus unresolved carry-forward. Resolution before closing does not erase an event from that day's permanent summary.
 

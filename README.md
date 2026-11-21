@@ -16,6 +16,7 @@
 | Reviewed meeting metrics and issues | Typed fields, operating dates, source references, revisions and explicit source status. |
 | Executive Snapshot | Refreshed known values with dates; rolling seven-calendar-day HIGH/MEDIUM events, including resolved events until expiry. |
 | Master Table | One immutable row per closed date, after configured closing time and meeting processing checks. |
+| Readable audit detail | Long text has a dedicated continuation view. Refresh restores layout and numeric formatting without changing historical cell values. |
 | Meeting and issue history | Dated meeting sheets, append-only issue revisions, source audit and unresolved handoff. |
 | OR block context | Versioned dated schedule with previous surgeon session and prior-month matching block lookbacks. |
 | Local refresh worker | Imports reviewed files, refreshes workbook payloads and attempts daily close. Requires an approved running computer. |

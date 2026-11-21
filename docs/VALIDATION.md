@@ -14,6 +14,8 @@ The new tests cover closing gates, permanent daily rows, late revisions, seven-d
 
 ## Before production
 
+- Refresh the same payload twice and verify the seven-day section color, stable column widths, wrapped detail rows and count formatting. Confirm zero duplicate daily records.
+- Read a long audit field through Audit Details and reconstruct its numbered parts. They must match the original source cell text, which is never overwritten by the display marker.
 - Verify only the selected Outlook, Teams, OneDrive/SharePoint, Excel and Graph connections. Verify flow-owner permissions, applicable DLP rules and credential mode.
 - Confirm meeting occurrence identity, local timezone and weekdays/holiday overrides.
 - Verify field definitions, units and operating dates with the reporting department.

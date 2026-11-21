@@ -1,5 +1,12 @@
 # Change log
 
+## 0.2.1
+
+- Made the publisher restore the blue seven-day section, column widths, wrapping and row spacing on every refresh, including previously stored rows.
+- Removed trailing decimal points from whole numbers while retaining fractional values.
+- Added a generated Audit Details reading view for long text, with source sheet/cell references and complete continuation parts. Original historical cell values remain unchanged.
+- Rebuilt both workbook templates and the preview using the publisher's layout. Added refresh-formatting, full-text integrity and upgrade regression checks.
+
 ## 0.2.0
 
 - Restored the full customizable readiness workflow, source/field maps, extraction templates, daily brief and refresh skills, and acceptance checklist.

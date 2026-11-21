@@ -82,3 +82,12 @@ python -m hospital_ops.readiness --profile data/setup/profile.json lookback --da
 The result distinguishes the prior surgeon session from the prior-month matching weekday/block. Only explicitly associated reviewed issues are returned. Supply this context to the briefing prompt; do not present it as a prediction.
 
 Complete the [validation checklist](VALIDATION.md) before using live publication and scheduled briefings.
+
+## Upgrade an existing workbook to the refreshed layout
+
+1. Replace the contents of the existing **Update Readiness Workbook** Office Script with the current `scripts/UpdateReadinessWorkbook.ts`. Keep the script selected by your flow, or explicitly reselect it if you save a new script.
+2. Run it with the latest payload for that same workbook. It repairs formatting on existing owned sheets and historical rows without changing their stored values or adding duplicate daily records.
+3. Confirm the blue seven-day heading stays blue after a second run, integer counts have no trailing decimal point, and fractional values remain fractional.
+4. For cells displaying **Full text: Audit Details**, open **Audit Details**, match the source sheet/cell, and read the numbered parts. The display marker is a number format only; the original text remains in the source cell and its formula bar. Text over 320 characters or six lines uses this reading view to avoid Excel row-height clipping.
+
+The additional tab is reserved for the publisher. If an unrelated sheet already has that name, publication stops before changing any sheet. Rename that unrelated sheet yourself before retrying. Do not replace your live workbook with the synthetic example.
