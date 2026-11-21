@@ -1,0 +1,31 @@
+{
+  "datasetMode": "synthetic",
+  "asOfUtc": "2027-01-22T14:30:00Z",
+  "note": "Exploratory walk-forward evaluation. Synthetic results demonstrate software behavior, not clinical or operational accuracy.",
+  "rules": [
+    {
+      "rule": "coverage_and_beds",
+      "scored": 4,
+      "unscored": 1,
+      "insufficientHistory": 10,
+      "truePositive": 3,
+      "falsePositive": 0,
+      "trueNegative": 1,
+      "falseNegative": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "rule": "readiness_and_coverage",
+      "scored": 0,
+      "unscored": 1,
+      "insufficientHistory": 14,
+      "truePositive": 0,
+      "falsePositive": 0,
+      "trueNegative": 0,
+      "falseNegative": 0,
+      "precision": null,
+      "recall": null
+    }
+  ]
+}

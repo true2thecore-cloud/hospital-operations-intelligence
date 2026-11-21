@@ -1,0 +1,5 @@
+meeting_key,label,local_start,report_order,required_roles
+safety_huddle,Safety huddle,08:00,1,"Safety;Capacity;Staffing;Throughput"
+plan_ahead_am,Morning Plan Ahead,09:00,2,"Cardiac;Preop;PACU;OR Charge;SPD;Specialty Coordinators;Biomed;Throughput;Patient Experience;Supply Chain;ANM"
+plan_ahead_pm,Afternoon Plan Ahead,14:00,3,"OR Charge;PACU Charge;Preop Charge;Phase 2 Charge;ANM"
+ops_huddle,Operations huddle,15:30,4,"Capacity;OR;PACU;Staffing;Escalations"

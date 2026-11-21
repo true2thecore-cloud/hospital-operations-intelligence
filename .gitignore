@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+data/
+inbox/
+outbox/
+*.sqlite*
+*.db
+.env*
+config/site.local.json
+*.vtt
+!examples/*.vtt
+*.log
+node_modules/
+

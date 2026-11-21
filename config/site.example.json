@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "siteLabel": "Your Hospital",
+  "leaderRole": "Operations Leader",
+  "timezone": "America/New_York",
+  "datasetMode": "operational",
+  "historyDays": 90,
+  "minimumHistory": 8,
+  "watchRate": 0.6,
+  "companionRepository": "https://github.com/true2thecore-cloud/charge-nurse-handoff-dashboard",
+  "meetings": [
+    {"key": "safety_huddle", "label": "Safety huddle", "time": "08:00", "order": 1, "reportOrder": ["Safety", "Capacity", "Staffing", "Throughput"]},
+    {"key": "plan_ahead_am", "label": "Morning Plan Ahead", "time": "09:00", "order": 2, "reportOrder": ["Cardiac", "Preop", "PACU", "OR Charge", "SPD", "Specialty Coordinators", "Biomed", "Throughput", "Patient Experience", "Supply Chain", "ANM"]},
+    {"key": "plan_ahead_pm", "label": "Afternoon Plan Ahead", "time": "14:00", "order": 3, "reportOrder": ["OR Charge", "PACU Charge", "Preop Charge", "Phase 2 Charge", "ANM"]},
+    {"key": "ops_huddle", "label": "Operations huddle", "time": "15:30", "order": 4, "reportOrder": ["Capacity", "OR", "PACU", "Staffing", "Escalations"]}
+  ],
+  "signals": [
+    {"key": "staffing_shortage", "label": "Staffing coverage concern", "domain": "Staffing", "keywords": ["call out", "call-out", "short staff", "coverage gap"]},
+    {"key": "bed_pressure", "label": "Receiving bed constraint", "domain": "Throughput", "keywords": ["bed", "capacity", "PACU hold"]},
+    {"key": "instrument_constraint", "label": "Instrument or tray concern", "domain": "Readiness", "keywords": ["tray", "instrument", "SPD"]},
+    {"key": "equipment_constraint", "label": "Equipment concern", "domain": "Readiness", "keywords": ["equipment", "repair", "biomed"]},
+    {"key": "supply_constraint", "label": "Supply or implant concern", "domain": "Readiness", "keywords": ["backorder", "implant", "low stock"]},
+    {"key": "late_coverage", "label": "Late shift coverage concern", "domain": "Staffing", "keywords": ["late room", "after 6", "hold coverage"]}
+  ],
+  "outcomes": [
+    {"key": "late_flow_delay", "label": "A later flow delay occurred", "definition": "A reviewer confirms a documented delay later that day. Local teams must define the threshold before collecting operational data."},
+    {"key": "next_day_readiness_issue", "label": "A next-day readiness issue was identified", "definition": "A later meeting explicitly confirms a readiness issue for the following staffing date."}
+  ],
+  "rules": [
+    {"key": "coverage_and_beds", "label": "Coverage and receiving-bed pressure", "checkpoint": "plan_ahead_am", "allSignals": ["staffing_shortage", "bed_pressure"], "outcome": "late_flow_delay", "action": "Review receiving-bed and coverage plans with the responsible leaders."},
+    {"key": "readiness_and_coverage", "label": "Instrument readiness and late coverage", "checkpoint": "plan_ahead_am", "allSignals": ["instrument_constraint", "late_coverage"], "outcome": "next_day_readiness_issue", "action": "Confirm tray readiness and the late-shift coverage plan at the next meeting."}
+  ]
+}

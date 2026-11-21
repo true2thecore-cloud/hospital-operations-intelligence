@@ -1,0 +1,18 @@
+{
+  "id": "example-am-review-1",
+  "meetingId": "example-am",
+  "reviewerRole": "Operations reviewer",
+  "observations": [
+    {
+      "signal": "staffing_shortage",
+      "state": "active",
+      "summary": "An afternoon coverage gap was reported.",
+      "cueIds": ["c1"],
+      "issueId": "coverage-2026-01-05",
+      "owner": "OR Charge",
+      "action": "Confirm the revised coverage plan at 2 PM.",
+      "due": "2026-01-05 14:00 local"
+    }
+  ],
+  "outcomes": []
+}

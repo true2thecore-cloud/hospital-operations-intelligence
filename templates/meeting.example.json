@@ -1,0 +1,7 @@
+{
+  "id": "example-am",
+  "kind": "plan_ahead_am",
+  "startsAt": "2027-01-04T09:00:00-05:00",
+  "sourceLabel": "Morning Plan Ahead",
+  "transcriptFile": "morning.vtt"
+}
