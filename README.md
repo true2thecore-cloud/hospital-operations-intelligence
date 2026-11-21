@@ -2,6 +2,10 @@
 
 **A configurable meeting memory and follow-through system for hospital leaders.** Connect morning plans, afternoon updates, staffing snapshots and charge nurse handoffs. Preserve the evidence, carry unresolved concerns forward, and examine which combinations of concerns preceded later outcomes.
 
+## Start here
+
+**New to this project? Open the [Start Here guide](docs/START-HERE.md).** It walks leaders and technical partners through what works now, what needs configuration, how to try the example, and how to connect an organization's own data. Optional agents and spoken briefings are clearly separated from included capabilities. Downloading the repository does not automatically create Microsoft connections, agents or flows.
+
 Companion: [Charge Nurse Handoff Dashboard](https://github.com/true2thecore-cloud/charge-nurse-handoff-dashboard). Both repositories are initially private for owner review. Links require access until their owner publishes them.
 
 ![Synthetic operations brief](assets/operations-preview.png)
