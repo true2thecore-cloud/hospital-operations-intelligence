@@ -1,4 +1,6 @@
 # Hospital Operations Intelligence
+> **Development preview: easier no-Python setup.** Open [the no-Python Start Here guide](docs/NO-PYTHON-START-HERE.md), or download this branch and open `setup/index.html`. The wizard generates personalized prompts and a complete Excel update script while preserving this operational framework. Microsoft connections still require local setup and acceptance. See [original-source verification](docs/NO-PYTHON-SOURCE-VERIFICATION.md).
+
 
 **Configurable meeting-to-workbook operations intelligence, with a surgical operations worked example.** Preserve meeting evidence, update the executive view, retain permanent daily records and prepare role-specific briefs.
 
@@ -60,3 +62,4 @@ node --test tests/office.test.mjs tests/readiness-office.test.mjs
 Examples are synthetic. Local tests and workbook rendering do not verify live tenant permissions, cloud flows or production outcomes. Historical associations are context, not validated forecasts. Source records and operational identities stay in organization-approved private storage, outside Git. The local stores are single-writer, not a hospital-wide hosted service.
 
 MIT licensed. Version 0.2.0. [Change log](CHANGELOG.md).
+

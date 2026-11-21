@@ -1,0 +1,326 @@
+[
+  {
+    "path": ".github/workflows/test.yml",
+    "sha256": "d1c5b68363271557c2543910cd9e0f704fd195ae9a2f821326dfc657d4b0af20"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "46f43d696e366d2aa0ba344bc872c5b138a9fdd9b3c5ea6e5cd606c42bd02b33"
+  },
+  {
+    "path": "agents/operations-agent.md",
+    "sha256": "dc3c56e34134d348a07aef3785c24f4d63e27f13f38ff1f66e758d2502758b64"
+  },
+  {
+    "path": "AGENTS.md",
+    "sha256": "af44691e952cd2c8e2ac20e4a828eaf1a2b1f85f39658539ca174d2c7e4fec60"
+  },
+  {
+    "path": "assets/example-brief.csv",
+    "sha256": "a3d2e81b04c385a50a79b74e25bdce59417c7fe1492f6f99d21cec5cc5dab937"
+  },
+  {
+    "path": "assets/example-brief.html",
+    "sha256": "93c00ddb93deabaa575d37f74cbc8a391a7d05f407ab2406a889a35e4d83c193"
+  },
+  {
+    "path": "assets/example-brief.json",
+    "sha256": "cf86cc70c89f544b64cd4b42f4554457d42a2c3aa55dab854f895aaf85f28f77"
+  },
+  {
+    "path": "assets/example-evaluation.json",
+    "sha256": "4297fc55082d8b62ea8d012e052954d7e58e05e5904687d53b79af0dc176a52c"
+  },
+  {
+    "path": "assets/operations-preview.png",
+    "sha256": "61d96021a3f7220dac5875b7dd78f59c1c32147b1d638cc5ca77bab78f2fab27"
+  },
+  {
+    "path": "assets/Readiness Synthetic Example.xlsx",
+    "sha256": "ae28e2311e042c849a5b82559181cd774b532275115acf9451940ddfe8e5d41e"
+  },
+  {
+    "path": "assets/readiness-example.json",
+    "sha256": "2d2d096b061bb232852d223754b892691c598f714a4534341e042528c53770b7"
+  },
+  {
+    "path": "assets/readiness-preview.png",
+    "sha256": "ffde47423e542c4c2e339d8cd693a1ab8d97f7180ab595a6dfcce751d8c948bf"
+  },
+  {
+    "path": "automation/action-manifest.json",
+    "sha256": "2a324a83af9a0bf1b2215bb99e0d671937f9a5e357cfbca991801bf53aa19ccd"
+  },
+  {
+    "path": "automation/connection-map.json",
+    "sha256": "c121c7ce3c152ffe8cf20af852b0daf1402eeaf14b157c5127101fec5c2c0bea"
+  },
+  {
+    "path": "automation/custom-connector.swagger2.json",
+    "sha256": "e4ef002a40ed3bb389af9cce1f5eb8f6634c687a9486dfff01aede0ae3c4e35c"
+  },
+  {
+    "path": "automation/flow-outline.json",
+    "sha256": "96044574f4a7dd2be2e7328fe21f09ee797c0d54b099cdf7b0d38b70f5ee0762"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "sha256": "3f40b3d7d92696d1b5a1472f1397a70da4d5b08491299b98c0fd8acddf634f6b"
+  },
+  {
+    "path": "config/readiness.example.json",
+    "sha256": "81515636eff3bdc59f17015e913d3df042486787e999ec09d84cf7571a587052"
+  },
+  {
+    "path": "config/site.example.json",
+    "sha256": "d6996602104e8ff494ecca8590c27656e59675b3273753055668c68a90afe9f8"
+  },
+  {
+    "path": "docs/ARCHITECTURE.md",
+    "sha256": "37538561d074380e9f03a318d1f2f9926b99e8d404de4ad8aac71a10d9507b7b"
+  },
+  {
+    "path": "docs/AUTOMATION-SETUP.md",
+    "sha256": "65b5fc2476f8df3843e8ef47e6967e45aa8d073705c786b85e2a026bd9e93f4d"
+  },
+  {
+    "path": "docs/COMPANION.md",
+    "sha256": "0438aa8c86f8a639ad1c146aaf477efa8a9f88d976b05bf91888829fd6f4360c"
+  },
+  {
+    "path": "docs/COPILOT-STUDIO.md",
+    "sha256": "6d260cea485db9101028d79616598f316f8ef9e99236054cd8ee1a8a74295533"
+  },
+  {
+    "path": "docs/CUSTOMIZATION.md",
+    "sha256": "24db1602bac47644352d30a058e9eecf9fd4912694508b18cfc47ddf111118ff"
+  },
+  {
+    "path": "docs/DATA-CONTRACTS.md",
+    "sha256": "38a73cfbaeefc76bd4be1c4ee2f6c0d0765787b7a673cc4be117760e4f728c3f"
+  },
+  {
+    "path": "docs/DATA-HANDLING.md",
+    "sha256": "b82553d47499d6a28fd4c3cf9bccc9bd7b7c4763974a8efe46dc720d0a25d3cb"
+  },
+  {
+    "path": "docs/LEARNING.md",
+    "sha256": "b2aa31f139731dea972ae107d29b3d2f3df09f47709fd59e24d1e800b4f59a14"
+  },
+  {
+    "path": "docs/MICROSOFT-365.md",
+    "sha256": "3aaf8a432ac7e9249d20b03ee79ee33c15b49bd3427bede5f043c8b207de5e6e"
+  },
+  {
+    "path": "docs/ONBOARDING.md",
+    "sha256": "1a424e1ebabeb2d5db7be6002bf1a7607ae3bdafa0005eda7aa636a65f785c38"
+  },
+  {
+    "path": "docs/PORTABLE-SETUP.md",
+    "sha256": "5be44ad89b910144a2adc19b34eb4a6f9d9c37f2849eb87472b2458671275b8c"
+  },
+  {
+    "path": "docs/READINESS-QUICKSTART.md",
+    "sha256": "b7e158b513d18db3350770d38792730081161bae058fd9b83623fd8a89de4aa6"
+  },
+  {
+    "path": "docs/SOURCE-TRACEABILITY.md",
+    "sha256": "09d0734b9d011d56113fc542686430e297ff66ba89bbd33d740eb6e24e579558"
+  },
+  {
+    "path": "docs/START-HERE.md",
+    "sha256": "222a5cf3ac478911bf72e0b5cda0b3ff02364dcce735e21ae643540cb0088415"
+  },
+  {
+    "path": "docs/TROUBLESHOOTING.md",
+    "sha256": "f7ecad999bf25ce7faf2910a2e849eaeaddeb351920de5afe5e90d4cd1f320d5"
+  },
+  {
+    "path": "docs/VALIDATION.md",
+    "sha256": "b35b463343bf7e1224ecdc60fbaa42fa2f53cc9db2b4ce1b570a23056291bbcf"
+  },
+  {
+    "path": "docs/WORKFLOW-SPECIFICATION.md",
+    "sha256": "4b5e222feca139d9a12d401cebfa5e9fcec8257fc78d88dd4c113a10da5c966e"
+  },
+  {
+    "path": "examples/morning.vtt",
+    "sha256": "bbb44570298710d70b4a46b870c58fca26607ed36dacf3bfb8a154ae5312c5af"
+  },
+  {
+    "path": "examples/readiness-profile.json",
+    "sha256": "2c556b89f22df43cd0c3260d8b87961fe3e30017865ff494eb64ed341418c74d"
+  },
+  {
+    "path": "examples/readiness.vtt",
+    "sha256": "eb496229097a1935712da4bf3d16a3a6152ec70810769cb077dcb5b5a10b1fd4"
+  },
+  {
+    "path": "hospital_ops/__init__.py",
+    "sha256": "d4251ea45acc50e6eb23b4ba2c0d2cac4a149195ed5fec37635600411a7418aa"
+  },
+  {
+    "path": "hospital_ops/__main__.py",
+    "sha256": "9346945844a279b82572580a4b4c96c668a91a458ceb97cf619b8c4fb0565f8f"
+  },
+  {
+    "path": "hospital_ops/configure.py",
+    "sha256": "ed24eef5817f6a42c5c432abe34b43c1512a15df0990025771f87ff15a32be26"
+  },
+  {
+    "path": "hospital_ops/core.py",
+    "sha256": "3f0211e5a963b8037468a77644afcc57b183416ad55cde7d42b517daaebdb0cc"
+  },
+  {
+    "path": "hospital_ops/demo.py",
+    "sha256": "59d3260c3fc6953f788995396dc9e5337e194b01da55fc66bba12d76a703394d"
+  },
+  {
+    "path": "hospital_ops/graph.py",
+    "sha256": "068e64690b0be7fe1f1a2124de5bb1c8ef45043a7801728e1e201d14a629e650"
+  },
+  {
+    "path": "hospital_ops/readiness.py",
+    "sha256": "2e3e402a20f948d8cf6c3624afb07e395e0d112d4be0e411084f29c43c308d52"
+  },
+  {
+    "path": "hospital_ops/readiness_demo.py",
+    "sha256": "a6630045470b822fa0ab027f3f51742739e11317fa92bfd1f4512b5b840ef7d5"
+  },
+  {
+    "path": "hospital_ops/readiness_watch.py",
+    "sha256": "08524228ac7520d4b9389e8ab6ec7c3ed2e2a54a62b8ed8340bb4c8a4fb50506"
+  },
+  {
+    "path": "hospital_ops/render.py",
+    "sha256": "c239a382f0f1206ba9fb747816e5c18abc22cfadd93e063e18a07f0a09faf98c"
+  },
+  {
+    "path": "hospital_ops/server.py",
+    "sha256": "151094ecee5f08aa824c1ef7b41695dd4064784120f81788eab3b1251a325b97"
+  },
+  {
+    "path": "hospital_ops/watch.py",
+    "sha256": "f69489afb1172ffd9b159d2e09d617fd4d79c32ffb23566f9ffb248f7296adf0"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "f3081fcceda962195fc2a70e56886da7d54d4759f0691d1eb1636a88a2da174c"
+  },
+  {
+    "path": "prompts/extract-meeting.md",
+    "sha256": "393ae9ea663b3827118a6be7498b3170d1476a42613aebf5379fdc94145e471a"
+  },
+  {
+    "path": "prompts/leadership-brief.md",
+    "sha256": "2536e9aefd6e829f0a6b570288530feebe2bf2f5b8a716782b329e523e498a0b"
+  },
+  {
+    "path": "prompts/meeting-extraction.md",
+    "sha256": "8c4044bbb65b150aceb73fe7dcfbca16ae4585f0986bf96062a40a2b97b8ae53"
+  },
+  {
+    "path": "README.md",
+    "sha256": "ca64b0219577c944aa41ff356ff3b2ab8ec7db810aeb9218c9b5a7fd910ccb4c"
+  },
+  {
+    "path": "scripts/ImportOperationsBrief.ts",
+    "sha256": "f7bb2686aba8467c95bf5ad5b8dc2ac4bf9e50e49723175f50d82e71c25eb666"
+  },
+  {
+    "path": "scripts/UpdateReadinessWorkbook.ts",
+    "sha256": "f9d532c7549c260c90258770982032ff68212d330da57d8f018fbb2779f94b87"
+  },
+  {
+    "path": "skills/daily-executive-brief/SKILL.md",
+    "sha256": "15c6ccb8bdfa68c80afbd6cdd1209c13e3ecaefe3adaa0bf586b6cbb24d8bc67"
+  },
+  {
+    "path": "skills/daily-readiness-refresh/SKILL.md",
+    "sha256": "64147d1edc107db65257fe240bc590f13aed98ae4e5eecf74c36498a54adb5c7"
+  },
+  {
+    "path": "skills/meeting-follow-through/SKILL.md",
+    "sha256": "b572bb5e7515121c7fa8bb634c04e260ffad6b09350de9b4834eb952e4d82b0b"
+  },
+  {
+    "path": "skills/organization-onboarding/SKILL.md",
+    "sha256": "f356d6474dc9a0f2744117963834bd0d3a97cacaae75a1bfa097a3185f417be9"
+  },
+  {
+    "path": "skills/pattern-review/SKILL.md",
+    "sha256": "1aca393ca82df583b8d9ece2406d27148db90b5628aea5e9d6e20a25f659c7c1"
+  },
+  {
+    "path": "skills/transcript-intake/SKILL.md",
+    "sha256": "c1cb92a9c5eab87f9fb17e114dc551724cdf86510b0722792c986b39baa35a2f"
+  },
+  {
+    "path": "templates/acceptance-checklist.csv",
+    "sha256": "841696e3d3b4e1cf6cecdd82bc144460db51389161af7bf7f79ce73dc22476a3"
+  },
+  {
+    "path": "templates/afternoon-plan-ahead.md",
+    "sha256": "9e2ee8cbad4cb6baef27700b23fdcc634881b5415a1c8b12153ba2485868ab8e"
+  },
+  {
+    "path": "templates/block-schedule.example.json",
+    "sha256": "d733bf729bef9a0945831daf661ccdab81a02e014cb0e1cfde2dcaa26a3e080c"
+  },
+  {
+    "path": "templates/Daily Operational Readiness.xlsx",
+    "sha256": "f355bbabb835780749034b2348787af354ffd0bf05439da2c967eea2f040eb7a"
+  },
+  {
+    "path": "templates/meeting-field-map.csv",
+    "sha256": "357697f2839ce39801e6f2a3a006c6294dafef6403545b4af5e71e183779a928"
+  },
+  {
+    "path": "templates/meeting-register.csv",
+    "sha256": "2f73696d8e8abb5d5ec2e3d86fa0100e04256371a3b657357331b25751a69206"
+  },
+  {
+    "path": "templates/meeting.example.json",
+    "sha256": "8995cfcb7f2e50bb7336ad421313a94371869859d6d7243275ac71287f6c9317"
+  },
+  {
+    "path": "templates/morning-plan-ahead.md",
+    "sha256": "ebe31039d412f3752fb8fb733b0764f830f3fe80fffe0b0c133ab4ede191797d"
+  },
+  {
+    "path": "templates/outcome-register.csv",
+    "sha256": "b8c48db2cc8de2a715d988decd43ccfade46b50d5e4b46665e8cd4523b34fbf5"
+  },
+  {
+    "path": "templates/review.example.json",
+    "sha256": "72ddf2296abd091957db5799e59bec403f25f43f6a867bccaf5c9b4647768299"
+  },
+  {
+    "path": "templates/reviewed-meeting.example.json",
+    "sha256": "73c5317b4acfb91d86c87e622dd2557d2eed5b670a5adda96eb9e7bb01e55052"
+  },
+  {
+    "path": "templates/source-register.csv",
+    "sha256": "e59334610aef9ce351475d2cea118344a0a05d4a673156bde4d9be653993a8ad"
+  },
+  {
+    "path": "tests/office.test.mjs",
+    "sha256": "372cb26d4e2f67981bb30b74fe6e17381de6f53196eb8e237b33c9c610189a3c"
+  },
+  {
+    "path": "tests/readiness-office.test.mjs",
+    "sha256": "6862572e6eb8c9a6d18c7cb5321ec1a60516da599b6641e9b761dd0d700d9e9c"
+  },
+  {
+    "path": "tests/test_core.py",
+    "sha256": "701e8df3d267baae10f97f6149c3491f04ff809f6c06a12cbdf3f6480226fd9c"
+  },
+  {
+    "path": "tests/test_intake.py",
+    "sha256": "ae77a0c91dff5578786f16241029ed60fd0498e38452c433b686c6dd46f91d25"
+  },
+  {
+    "path": "tests/test_readiness.py",
+    "sha256": "3f7276339c8e64f287013b481fd4cf4bf9c5ab9751730ab07bf4c6a4739e0e32"
+  }
+]

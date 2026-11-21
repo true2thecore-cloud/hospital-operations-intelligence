@@ -1,0 +1,718 @@
+{
+  "profile": {
+    "version": 2,
+    "siteKey": "parity_example",
+    "siteLabel": "Parity example",
+    "datasetMode": "synthetic",
+    "timezone": "America/New_York",
+    "closingTime": "23:00",
+    "transcriptDelayMinutes": 60,
+    "fields": [
+      {
+        "key": "census",
+        "label": "Census",
+        "type": "number",
+        "min": 0,
+        "unit": "patients"
+      },
+      {
+        "key": "or_cases",
+        "label": "Cases",
+        "type": "number",
+        "min": 0,
+        "unit": "cases"
+      }
+    ],
+    "meetings": [
+      {
+        "key": "am",
+        "label": "am",
+        "end": "09:30",
+        "weekdays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "fields": [
+          "census",
+          "or_cases"
+        ]
+      },
+      {
+        "key": "pm",
+        "label": "pm",
+        "end": "21:30",
+        "weekdays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "fields": [
+          "census",
+          "or_cases"
+        ]
+      }
+    ]
+  },
+  "inputs": [
+    {
+      "record": {
+        "version": 2,
+        "id": "2027-01-21-am",
+        "date": "2027-01-21",
+        "meetingKey": "am",
+        "startsAt": "2027-01-21T09:00:00-05:00",
+        "endsAt": "2027-01-21T09:30:00-05:00",
+        "status": "processed",
+        "reviewerRole": "Synthetic reviewer",
+        "sources": [
+          {
+            "id": "vtt",
+            "type": "transcript",
+            "status": "available",
+            "reference": "synthetic-only"
+          }
+        ],
+        "metrics": [
+          {
+            "field": "census",
+            "value": 250,
+            "observedAt": "2027-01-21T09:15:00-05:00",
+            "appliesToDate": "2027-01-21",
+            "evidence": [
+              {
+                "sourceId": "vtt",
+                "locator": "00:01"
+              }
+            ]
+          },
+          {
+            "field": "or_cases",
+            "value": 28,
+            "observedAt": "2027-01-21T09:15:00-05:00",
+            "appliesToDate": "2027-01-25",
+            "evidence": [
+              {
+                "sourceId": "vtt",
+                "locator": "00:02"
+              }
+            ]
+          }
+        ],
+        "issues": [
+          {
+            "issueId": "example-tray",
+            "eventDate": "2027-01-21",
+            "summary": "Example tray concern",
+            "severity": "HIGH",
+            "state": "active",
+            "evidence": [
+              {
+                "sourceId": "vtt",
+                "locator": "00:03"
+              }
+            ]
+          }
+        ]
+      },
+      "receivedAt": "2027-01-21T09:45:00-05:00"
+    },
+    {
+      "record": {
+        "version": 2,
+        "id": "2027-01-21-pm",
+        "date": "2027-01-21",
+        "meetingKey": "pm",
+        "startsAt": "2027-01-21T21:00:00-05:00",
+        "endsAt": "2027-01-21T21:30:00-05:00",
+        "status": "processed",
+        "reviewerRole": "Synthetic reviewer",
+        "sources": [
+          {
+            "id": "vtt",
+            "type": "transcript",
+            "status": "available",
+            "reference": "synthetic-only"
+          }
+        ],
+        "metrics": [
+          {
+            "field": "census",
+            "value": 256,
+            "observedAt": "2027-01-21T21:15:00-05:00",
+            "appliesToDate": "2027-01-21",
+            "evidence": [
+              {
+                "sourceId": "vtt",
+                "locator": "00:01"
+              }
+            ]
+          },
+          {
+            "field": "or_cases",
+            "value": 28,
+            "observedAt": "2027-01-21T21:15:00-05:00",
+            "appliesToDate": "2027-01-25",
+            "evidence": [
+              {
+                "sourceId": "vtt",
+                "locator": "00:02"
+              }
+            ]
+          }
+        ],
+        "issues": [
+          {
+            "issueId": "example-tray",
+            "eventDate": "2027-01-21",
+            "summary": "Example tray concern",
+            "severity": "HIGH",
+            "state": "active",
+            "evidence": [
+              {
+                "sourceId": "vtt",
+                "locator": "00:03"
+              }
+            ]
+          }
+        ]
+      },
+      "receivedAt": "2027-01-21T21:45:00-05:00"
+    },
+    {
+      "record": {
+        "version": 2,
+        "id": "2027-01-22-am",
+        "date": "2027-01-22",
+        "meetingKey": "am",
+        "startsAt": "2027-01-22T09:00:00-05:00",
+        "endsAt": "2027-01-22T09:30:00-05:00",
+        "status": "processed",
+        "reviewerRole": "Synthetic reviewer",
+        "sources": [
+          {
+            "id": "vtt",
+            "type": "transcript",
+            "status": "available",
+            "reference": "synthetic-only"
+          }
+        ],
+        "metrics": [
+          {
+            "field": "census",
+            "value": 250,
+            "observedAt": "2027-01-22T09:15:00-05:00",
+            "appliesToDate": "2027-01-22",
+            "evidence": [
+              {
+                "sourceId": "vtt",
+                "locator": "00:01"
+              }
+            ]
+          },
+          {
+            "field": "or_cases",
+            "value": 28,
+            "observedAt": "2027-01-22T09:15:00-05:00",
+            "appliesToDate": "2027-01-25",
+            "evidence": [
+              {
+                "sourceId": "vtt",
+                "locator": "00:02"
+              }
+            ]
+          }
+        ],
+        "issues": [
+          {
+            "issueId": "example-tray",
+            "eventDate": "2027-01-21",
+            "summary": "Example tray concern",
+            "severity": "HIGH",
+            "state": "active",
+            "evidence": [
+              {
+                "sourceId": "vtt",
+                "locator": "00:03"
+              }
+            ]
+          }
+        ]
+      },
+      "receivedAt": "2027-01-22T09:45:00-05:00"
+    },
+    {
+      "record": {
+        "version": 2,
+        "id": "2027-01-22-pm",
+        "date": "2027-01-22",
+        "meetingKey": "pm",
+        "startsAt": "2027-01-22T21:00:00-05:00",
+        "endsAt": "2027-01-22T21:30:00-05:00",
+        "status": "processed",
+        "reviewerRole": "Synthetic reviewer",
+        "sources": [
+          {
+            "id": "vtt",
+            "type": "transcript",
+            "status": "available",
+            "reference": "synthetic-only"
+          }
+        ],
+        "metrics": [
+          {
+            "field": "census",
+            "value": 256,
+            "observedAt": "2027-01-22T21:15:00-05:00",
+            "appliesToDate": "2027-01-22",
+            "evidence": [
+              {
+                "sourceId": "vtt",
+                "locator": "00:01"
+              }
+            ]
+          },
+          {
+            "field": "or_cases",
+            "value": 28,
+            "observedAt": "2027-01-22T21:15:00-05:00",
+            "appliesToDate": "2027-01-25",
+            "evidence": [
+              {
+                "sourceId": "vtt",
+                "locator": "00:02"
+              }
+            ]
+          }
+        ],
+        "issues": [
+          {
+            "issueId": "example-tray",
+            "eventDate": "2027-01-21",
+            "summary": "Example tray concern",
+            "severity": "HIGH",
+            "state": "cleared",
+            "evidence": [
+              {
+                "sourceId": "vtt",
+                "locator": "00:03"
+              }
+            ]
+          }
+        ]
+      },
+      "receivedAt": "2027-01-22T21:45:00-05:00"
+    }
+  ],
+  "snapshot": {
+    "date": "2027-01-22",
+    "asOfUtc": "2027-01-23T04:05:00Z",
+    "metrics": {
+      "census": {
+        "appliesToDate": "2027-01-22",
+        "evidence": [
+          {
+            "locator": "00:01",
+            "sourceId": "vtt"
+          }
+        ],
+        "field": "census",
+        "observedAt": "2027-01-22T21:15:00-05:00",
+        "value": 256,
+        "recordId": "2027-01-22-pm",
+        "meetingKey": "pm",
+        "receivedAt": "2027-01-23T02:45:00Z"
+      }
+    },
+    "sevenDayConcerns": [
+      {
+        "action": "Not stated",
+        "due": "Not stated",
+        "eventDate": "2027-01-21",
+        "evidence": [
+          {
+            "locator": "00:03",
+            "sourceId": "vtt"
+          }
+        ],
+        "issueId": "example-tray",
+        "owner": "Not stated",
+        "severity": "HIGH",
+        "state": "cleared",
+        "summary": "Example tray concern",
+        "recordId": "2027-01-22-pm",
+        "meetingKey": "pm",
+        "updatedAt": "2027-01-22T21:30:00-05:00",
+        "trackedSeverity": "HIGH"
+      }
+    ],
+    "dailyConcerns": [
+      {
+        "action": "Not stated",
+        "due": "Not stated",
+        "eventDate": "2027-01-21",
+        "evidence": [
+          {
+            "locator": "00:03",
+            "sourceId": "vtt"
+          }
+        ],
+        "issueId": "example-tray",
+        "owner": "Not stated",
+        "severity": "HIGH",
+        "state": "cleared",
+        "summary": "Example tray concern",
+        "recordId": "2027-01-22-pm",
+        "meetingKey": "pm",
+        "updatedAt": "2027-01-22T21:30:00-05:00"
+      }
+    ],
+    "openIssues": [],
+    "upcomingMetrics": [
+      {
+        "appliesToDate": "2027-01-25",
+        "evidence": [
+          {
+            "locator": "00:02",
+            "sourceId": "vtt"
+          }
+        ],
+        "field": "or_cases",
+        "observedAt": "2027-01-21T09:15:00-05:00",
+        "value": 28,
+        "recordId": "2027-01-21-am",
+        "meetingKey": "am"
+      },
+      {
+        "appliesToDate": "2027-01-25",
+        "evidence": [
+          {
+            "locator": "00:02",
+            "sourceId": "vtt"
+          }
+        ],
+        "field": "or_cases",
+        "observedAt": "2027-01-21T21:15:00-05:00",
+        "value": 28,
+        "recordId": "2027-01-21-pm",
+        "meetingKey": "pm"
+      },
+      {
+        "appliesToDate": "2027-01-25",
+        "evidence": [
+          {
+            "locator": "00:02",
+            "sourceId": "vtt"
+          }
+        ],
+        "field": "or_cases",
+        "observedAt": "2027-01-22T09:15:00-05:00",
+        "value": 28,
+        "recordId": "2027-01-22-am",
+        "meetingKey": "am"
+      },
+      {
+        "appliesToDate": "2027-01-25",
+        "evidence": [
+          {
+            "locator": "00:02",
+            "sourceId": "vtt"
+          }
+        ],
+        "field": "or_cases",
+        "observedAt": "2027-01-22T21:15:00-05:00",
+        "value": 28,
+        "recordId": "2027-01-22-pm",
+        "meetingKey": "pm"
+      }
+    ]
+  },
+  "expiredSnapshot": {
+    "date": "2027-01-28",
+    "asOfUtc": "2027-01-29T04:05:00Z",
+    "metrics": {
+      "census": {
+        "appliesToDate": "2027-01-22",
+        "evidence": [
+          {
+            "locator": "00:01",
+            "sourceId": "vtt"
+          }
+        ],
+        "field": "census",
+        "observedAt": "2027-01-22T21:15:00-05:00",
+        "value": 256,
+        "recordId": "2027-01-22-pm",
+        "meetingKey": "pm",
+        "receivedAt": "2027-01-23T02:45:00Z"
+      },
+      "or_cases": {
+        "appliesToDate": "2027-01-25",
+        "evidence": [
+          {
+            "locator": "00:02",
+            "sourceId": "vtt"
+          }
+        ],
+        "field": "or_cases",
+        "observedAt": "2027-01-22T21:15:00-05:00",
+        "value": 28,
+        "recordId": "2027-01-22-pm",
+        "meetingKey": "pm",
+        "receivedAt": "2027-01-23T02:45:00Z"
+      }
+    },
+    "sevenDayConcerns": [],
+    "dailyConcerns": [],
+    "openIssues": [],
+    "upcomingMetrics": []
+  },
+  "closedSnapshots": [
+    {
+      "asOfUtc": "2027-01-22T04:05:00Z",
+      "dailyConcerns": [
+        {
+          "action": "Not stated",
+          "due": "Not stated",
+          "eventDate": "2027-01-21",
+          "evidence": [
+            {
+              "locator": "00:03",
+              "sourceId": "vtt"
+            }
+          ],
+          "issueId": "example-tray",
+          "meetingKey": "pm",
+          "owner": "Not stated",
+          "recordId": "2027-01-21-pm",
+          "severity": "HIGH",
+          "state": "active",
+          "summary": "Example tray concern",
+          "updatedAt": "2027-01-21T21:30:00-05:00"
+        }
+      ],
+      "date": "2027-01-21",
+      "metrics": {
+        "census": {
+          "appliesToDate": "2027-01-21",
+          "evidence": [
+            {
+              "locator": "00:01",
+              "sourceId": "vtt"
+            }
+          ],
+          "field": "census",
+          "meetingKey": "pm",
+          "observedAt": "2027-01-21T21:15:00-05:00",
+          "receivedAt": "2027-01-22T02:45:00Z",
+          "recordId": "2027-01-21-pm",
+          "value": 256
+        }
+      },
+      "openIssues": [
+        {
+          "action": "Not stated",
+          "due": "Not stated",
+          "eventDate": "2027-01-21",
+          "evidence": [
+            {
+              "locator": "00:03",
+              "sourceId": "vtt"
+            }
+          ],
+          "issueId": "example-tray",
+          "meetingKey": "pm",
+          "owner": "Not stated",
+          "recordId": "2027-01-21-pm",
+          "severity": "HIGH",
+          "state": "active",
+          "summary": "Example tray concern",
+          "updatedAt": "2027-01-21T21:30:00-05:00"
+        }
+      ],
+      "sevenDayConcerns": [
+        {
+          "action": "Not stated",
+          "due": "Not stated",
+          "eventDate": "2027-01-21",
+          "evidence": [
+            {
+              "locator": "00:03",
+              "sourceId": "vtt"
+            }
+          ],
+          "issueId": "example-tray",
+          "meetingKey": "pm",
+          "owner": "Not stated",
+          "recordId": "2027-01-21-pm",
+          "severity": "HIGH",
+          "state": "active",
+          "summary": "Example tray concern",
+          "trackedSeverity": "HIGH",
+          "updatedAt": "2027-01-21T21:30:00-05:00"
+        }
+      ],
+      "upcomingMetrics": [
+        {
+          "appliesToDate": "2027-01-25",
+          "evidence": [
+            {
+              "locator": "00:02",
+              "sourceId": "vtt"
+            }
+          ],
+          "field": "or_cases",
+          "meetingKey": "am",
+          "observedAt": "2027-01-21T09:15:00-05:00",
+          "recordId": "2027-01-21-am",
+          "value": 28
+        },
+        {
+          "appliesToDate": "2027-01-25",
+          "evidence": [
+            {
+              "locator": "00:02",
+              "sourceId": "vtt"
+            }
+          ],
+          "field": "or_cases",
+          "meetingKey": "pm",
+          "observedAt": "2027-01-21T21:15:00-05:00",
+          "recordId": "2027-01-21-pm",
+          "value": 28
+        }
+      ]
+    },
+    {
+      "asOfUtc": "2027-01-23T04:05:00Z",
+      "dailyConcerns": [
+        {
+          "action": "Not stated",
+          "due": "Not stated",
+          "eventDate": "2027-01-21",
+          "evidence": [
+            {
+              "locator": "00:03",
+              "sourceId": "vtt"
+            }
+          ],
+          "issueId": "example-tray",
+          "meetingKey": "pm",
+          "owner": "Not stated",
+          "recordId": "2027-01-22-pm",
+          "severity": "HIGH",
+          "state": "cleared",
+          "summary": "Example tray concern",
+          "updatedAt": "2027-01-22T21:30:00-05:00"
+        }
+      ],
+      "date": "2027-01-22",
+      "metrics": {
+        "census": {
+          "appliesToDate": "2027-01-22",
+          "evidence": [
+            {
+              "locator": "00:01",
+              "sourceId": "vtt"
+            }
+          ],
+          "field": "census",
+          "meetingKey": "pm",
+          "observedAt": "2027-01-22T21:15:00-05:00",
+          "receivedAt": "2027-01-23T02:45:00Z",
+          "recordId": "2027-01-22-pm",
+          "value": 256
+        }
+      },
+      "openIssues": [],
+      "sevenDayConcerns": [
+        {
+          "action": "Not stated",
+          "due": "Not stated",
+          "eventDate": "2027-01-21",
+          "evidence": [
+            {
+              "locator": "00:03",
+              "sourceId": "vtt"
+            }
+          ],
+          "issueId": "example-tray",
+          "meetingKey": "pm",
+          "owner": "Not stated",
+          "recordId": "2027-01-22-pm",
+          "severity": "HIGH",
+          "state": "cleared",
+          "summary": "Example tray concern",
+          "trackedSeverity": "HIGH",
+          "updatedAt": "2027-01-22T21:30:00-05:00"
+        }
+      ],
+      "upcomingMetrics": [
+        {
+          "appliesToDate": "2027-01-25",
+          "evidence": [
+            {
+              "locator": "00:02",
+              "sourceId": "vtt"
+            }
+          ],
+          "field": "or_cases",
+          "meetingKey": "am",
+          "observedAt": "2027-01-21T09:15:00-05:00",
+          "recordId": "2027-01-21-am",
+          "value": 28
+        },
+        {
+          "appliesToDate": "2027-01-25",
+          "evidence": [
+            {
+              "locator": "00:02",
+              "sourceId": "vtt"
+            }
+          ],
+          "field": "or_cases",
+          "meetingKey": "pm",
+          "observedAt": "2027-01-21T21:15:00-05:00",
+          "recordId": "2027-01-21-pm",
+          "value": 28
+        },
+        {
+          "appliesToDate": "2027-01-25",
+          "evidence": [
+            {
+              "locator": "00:02",
+              "sourceId": "vtt"
+            }
+          ],
+          "field": "or_cases",
+          "meetingKey": "am",
+          "observedAt": "2027-01-22T09:15:00-05:00",
+          "recordId": "2027-01-22-am",
+          "value": 28
+        },
+        {
+          "appliesToDate": "2027-01-25",
+          "evidence": [
+            {
+              "locator": "00:02",
+              "sourceId": "vtt"
+            }
+          ],
+          "field": "or_cases",
+          "meetingKey": "pm",
+          "observedAt": "2027-01-22T21:15:00-05:00",
+          "recordId": "2027-01-22-pm",
+          "value": 28
+        }
+      ]
+    }
+  ]
+}
