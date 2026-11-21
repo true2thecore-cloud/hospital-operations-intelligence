@@ -54,7 +54,7 @@ def watch(db, config_path, inbox, out, interval=60, once=False):
                 for name, text in [('operations.json', json.dumps(report, indent=2)), ('operations.html', render_report(report)), ('operations.csv', issues_csv(report))]:
                     # Atomic rename prevents a consumer from reading a partial JSON file.
                     temp = out / (name + '.tmp')
-                    temp.write_text(text, encoding='utf-8')
+                    temp.write_text(text, encoding='utf-8', newline='')
                     temp.replace(out / name)
                 print('Updated operations brief for ' + day, flush=True)
             if errors != last_errors:

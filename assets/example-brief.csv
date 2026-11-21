@@ -1,10 +1,5 @@
 issueId,state,summary,owner,action,due,date,meetingId
-
 synthetic-staffing_shortage,active,A coverage gap is confirmed for the afternoon.,OR Charge,Confirm coverage and receiving plan at the afternoon meeting.,2027-01-22 14:00 local,2027-01-22,synthetic-2027-01-22-am
-
 synthetic-bed_pressure,active,Two receiving beds are unavailable; PACU holds are expected.,PACU Charge,Confirm coverage and receiving plan at the afternoon meeting.,2027-01-22 14:00 local,2027-01-22,synthetic-2027-01-22-am
-
 synthetic-instrument_constraint,cleared,Trays are ready.,Readiness Lead,No follow-up stated.,2027-01-22 14:00 local,2027-01-22,synthetic-2027-01-22-am
-
 synthetic-late_coverage,cleared,Late coverage is confirmed.,Readiness Lead,No follow-up stated.,2027-01-22 14:00 local,2027-01-22,synthetic-2027-01-22-am
-

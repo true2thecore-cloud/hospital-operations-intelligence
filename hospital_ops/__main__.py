@@ -95,7 +95,7 @@ def main():
             base.parent.mkdir(parents=True, exist_ok=True)
             write_json(result, str(base) + '.json')
             Path(str(base) + '.html').write_text(render_report(result), encoding='utf-8')
-            Path(str(base) + '.csv').write_text(issues_csv(result), encoding='utf-8-sig')
+            Path(str(base) + '.csv').write_text(issues_csv(result), encoding='utf-8-sig', newline='')
             print('Created ' + str(base) + '.html, .json and .csv')
         elif args.command == 'evaluate':
             write_json(store.evaluate(args.as_of), args.out)

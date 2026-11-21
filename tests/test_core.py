@@ -1,4 +1,5 @@
 import copy
+import csv
 import json
 import tempfile
 import unittest
@@ -160,6 +161,8 @@ class CoreTests(unittest.TestCase):
         self.assertEqual(report['warnings'][0]['history']['events'], 8)
         self.assertEqual(report['snapshots']['staffing']['payload']['staffingDate'], '2027-01-25')
         self.assertTrue((out / 'evaluation.json').exists())
+        with (out / 'brief.csv').open(newline='', encoding='utf-8') as stream:
+            self.assertEqual(len(list(csv.reader(stream))), 5)
 
 
 if __name__ == '__main__':

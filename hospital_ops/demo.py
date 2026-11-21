@@ -57,7 +57,7 @@ def create_demo(out='data/demo'):
         'rows': [['example-1', day + 'T14:10:00Z', 'Charge RN', 'Yes', 'Yes', 'Coverage plan requires afternoon follow-up.']]}, day + 'T14:16:00Z')
     report = store.report(day, day + 'T14:30:00Z')
     for suffix, text in [('json', json.dumps(report, indent=2)), ('html', render_report(report)), ('csv', issues_csv(report))]:
-        (root / ('brief.' + suffix)).write_text(text, encoding='utf-8')
+        (root / ('brief.' + suffix)).write_text(text, encoding='utf-8', newline='')
     (root / 'evaluation.json').write_text(json.dumps(store.evaluate(day + 'T14:30:00Z'), indent=2), encoding='utf-8')
     store.close()
     return str(root / 'brief.html')
