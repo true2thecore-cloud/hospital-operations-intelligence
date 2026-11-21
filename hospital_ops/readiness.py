@@ -170,6 +170,8 @@ def snapshot(s, p, day, cutoff):
              if start <= i['eventDate'] <= day and rank[peak[k]] >= 2]
     return dict(date=day, asOfUtc=timestamp(cutoff), metrics=known,
                 sevenDayConcerns=sorted(seven, key=lambda i: (i['eventDate'], i['issueId']), reverse=True),
+                dailyConcerns=[i for i in issues.values() if i['eventDate'] == day or
+                               instant(i['updatedAt']).astimezone(ZoneInfo(p['timezone'])).date().isoformat() == day or i['state'] != 'cleared'],
                 openIssues=[i for i in issues.values() if i['state'] != 'cleared'],
                 upcomingMetrics=future)
 
@@ -277,7 +279,7 @@ def payload(s, p, day, cutoff=None):
     for r in closed:
         metrics = r['snapshot']['metrics']
         row = [r['date']] + [metrics[f['key']]['value'] if f['key'] in metrics else 'Not stated' for f in fields]
-        row += ['; '.join(i['summary'] for i in r['snapshot']['openIssues']), r['closedAt'], '; '.join(r['recordIds']),
+        row += ['; '.join(i['summary'] + (' [' + i['state'] + ']' if 'dailyConcerns' in r['snapshot'] else '') for i in r['snapshot'].get('dailyConcerns', r['snapshot']['openIssues'])), r['closedAt'], '; '.join(r['recordIds']),
                 json.dumps(metrics, ensure_ascii=False), json.dumps(r['coverage']), digest(r)]
         rows.append(row)
     sheet('Master Table', 'append', headers, rows, [r['date'] for r in closed])

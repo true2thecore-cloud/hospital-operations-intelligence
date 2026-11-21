@@ -63,6 +63,27 @@
         "trackedSeverity": "HIGH"
       }
     ],
+    "dailyConcerns": [
+      {
+        "action": "No further action stated",
+        "due": "Completed",
+        "eventDate": "2027-01-21",
+        "evidence": [
+          {
+            "locator": "Synthetic cue 1",
+            "sourceId": "synthetic-source"
+          }
+        ],
+        "issueId": "example-coverage",
+        "owner": "Unit lead",
+        "severity": "HIGH",
+        "state": "cleared",
+        "summary": "Coverage confirmed; earlier concern resolved.",
+        "recordId": "2027-01-22-plan_pm",
+        "meetingKey": "plan_pm",
+        "updatedAt": "2027-01-22T14:30:00-05:00"
+      }
+    ],
     "openIssues": [],
     "upcomingMetrics": []
   },
@@ -247,12 +268,12 @@
           "Not stated",
           "Not stated",
           "Not stated",
-          "Coverage concern documented for receiving unit.",
+          "Coverage concern documented for receiving unit. [active]",
           "2027-01-22T04:05:00Z",
           "2027-01-21-safety_am; 2027-01-21-plan_am; 2027-01-21-plan_pm; 2027-01-21-operations; 2027-01-21-safety_pm",
           "{\"census\": {\"appliesToDate\": \"2027-01-21\", \"evidence\": [{\"locator\": \"Synthetic cue 1\", \"sourceId\": \"synthetic-source\"}], \"field\": \"census\", \"meetingKey\": \"safety_pm\", \"observedAt\": \"2027-01-21T21:00:00-05:00\", \"receivedAt\": \"2027-01-22T04:01:00Z\", \"recordId\": \"2027-01-21-safety_pm\", \"value\": 250}, \"or_cases\": {\"appliesToDate\": \"2027-01-21\", \"evidence\": [{\"locator\": \"Synthetic cue 1\", \"sourceId\": \"synthetic-source\"}], \"field\": \"or_cases\", \"meetingKey\": \"plan_am\", \"observedAt\": \"2027-01-21T09:30:00-05:00\", \"receivedAt\": \"2027-01-22T04:01:00Z\", \"recordId\": \"2027-01-21-plan_am\", \"value\": 28}}",
           "[{\"meetingKey\": \"safety_am\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"plan_am\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"plan_pm\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"operations\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"safety_pm\", \"note\": \"\", \"status\": \"processed\"}]",
-          "45492f7bb6cb9a531910c39668f13b4c2da44624c6b6e0a01f30491762d077d5"
+          "3e74781ef291234a69b86f4562bec13d87e50ae3ef086dbb2acfcf23a52c7d79"
         ],
         [
           "2027-01-22",
@@ -279,12 +300,12 @@
           "Not stated",
           "Not stated",
           "Not stated",
-          "",
+          "Coverage confirmed; earlier concern resolved. [cleared]",
           "2027-01-23T04:05:00Z",
           "2027-01-22-safety_am; 2027-01-22-plan_am; 2027-01-22-plan_pm; 2027-01-22-operations; 2027-01-22-safety_pm",
           "{\"census\": {\"appliesToDate\": \"2027-01-22\", \"evidence\": [{\"locator\": \"Synthetic cue 1\", \"sourceId\": \"synthetic-source\"}], \"field\": \"census\", \"meetingKey\": \"safety_pm\", \"observedAt\": \"2027-01-22T21:00:00-05:00\", \"receivedAt\": \"2027-01-23T04:01:00Z\", \"recordId\": \"2027-01-22-safety_pm\", \"value\": 256}, \"or_cases\": {\"appliesToDate\": \"2027-01-22\", \"evidence\": [{\"locator\": \"Synthetic cue 1\", \"sourceId\": \"synthetic-source\"}], \"field\": \"or_cases\", \"meetingKey\": \"plan_am\", \"observedAt\": \"2027-01-22T09:30:00-05:00\", \"receivedAt\": \"2027-01-23T04:01:00Z\", \"recordId\": \"2027-01-22-plan_am\", \"value\": 28}}",
           "[{\"meetingKey\": \"safety_am\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"plan_am\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"plan_pm\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"operations\", \"note\": \"\", \"status\": \"processed\"}, {\"meetingKey\": \"safety_pm\", \"note\": \"\", \"status\": \"processed\"}]",
-          "6d735620c25cf0df5a3660f678796789bd79d582a2c7907e1e54790afe146991"
+          "534641b883752eaf842d821e4114b6378ec55a1cadc1706c58a6aec1ab39096b"
         ]
       ],
       "keys": [

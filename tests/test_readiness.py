@@ -66,6 +66,14 @@ class ReadinessTests(unittest.TestCase):
         bad=copy.deepcopy(self.r);bad['id']='other';bad['issues'][0]['eventDate']='2027-01-21'
         with self.assertRaisesRegex(ValueError,'reset'):self.add(bad)
 
+    def test_resolved_same_day_remains_in_permanent_daily_concerns(self):
+        self.r['issues'][0]['state']='cleared';self.add()
+        closed=close_day(self.s,self.p,'2027-01-22',self.now)
+        self.assertEqual(closed['snapshot']['openIssues'],[])
+        self.assertEqual(len(closed['snapshot']['dailyConcerns']),1)
+        master=next(v for v in payload(self.s,self.p,'2027-01-22',self.now)['sheets'] if v['name']=='Master Table')
+        self.assertIn('[cleared]',master['rows'][0][len(self.p['fields'])+1])
+
     def test_unavailable_allows_close_and_weekend_not_expected(self):
         self.r.update(status='unavailable',statusNote='Transcript unavailable after review',metrics=[],issues=[],sources=[])
         self.add();self.assertEqual(close_day(self.s,self.p,'2027-01-22',self.now)['coverage'][0]['status'],'unavailable')

@@ -22,6 +22,8 @@ This specification preserves the original surgical operations workflow while rep
 | Hand-Off Review | Current unresolved issues, including those older than seven days. Explicit resolution required. |
 | Source Audit Log | Append source status for each reviewed revision. Distinguish missing, pending, denied and not applicable. |
 
+The closed daily summary includes concerns raised or updated that day, including resolved concerns, plus unresolved carry-forward. Resolution before closing does not erase an event from that day's permanent summary.
+
 If closing is missed because the worker was stopped, an explicit later close uses evidence available at that actual close time and records that time. It never pretends to have closed earlier. Repeat close returns the original record. Changes to the field schema require an explicit new workbook/schema migration; the Excel publisher refuses to reinterpret an existing Master Table's columns.
 
 ## Configurable data contract
