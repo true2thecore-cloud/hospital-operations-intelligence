@@ -88,6 +88,15 @@ class CoreTests(unittest.TestCase):
         self.assertEqual(h['matchedDays'], 0)
         self.assertEqual(h['unknownOutcomeDays'], 1)
 
+    def test_afternoon_combination_does_not_become_morning_pattern(self):
+        self.meeting()
+        self.review(state='cleared')
+        self.meeting('pm', 'plan_ahead_pm', '14:00')
+        self.review('pm', 'pmr', state='active', at='2027-01-04T14:10:00Z')
+        report = self.store.report('2027-01-04', '2027-01-04T14:30:00Z')
+        self.assertEqual(len([i for i in report['issues'] if i['state'] == 'active']), 2)
+        self.assertEqual(report['warnings'], [])
+
     def test_outcome_requires_later_meeting_and_known_at_cutoff(self):
         self.meeting()
         o = [{'key': 'late_flow_delay', 'value': True, 'summary': 'Example delay', 'cueIds': ['c1']}]

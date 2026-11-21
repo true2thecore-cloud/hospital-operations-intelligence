@@ -13,6 +13,7 @@ The synthetic example contains **8 events among 11 matched earlier days**. These
 - Meeting start, transcript receipt and review availability are separate timestamps.
 - An observation becomes available only after its source and review are received.
 - A checkpoint uses the first available confirmed review of the configured meeting type.
+- A warning requires the combination at that checkpoint and still-active signals in the current reviewed state. A combination first raised in the afternoon is not compared as a morning pattern; configure an afternoon checkpoint rule for that use case.
 - Earlier as-of reports exclude later reviews, revisions and outcomes.
 - Historical comparisons use earlier dates only, within the lookback window.
 - The outcome must be documented in a meeting that starts after the checkpoint.

@@ -322,7 +322,12 @@ class Store:
         states = self.states(day, as_of)
         result = []
         for rule in self.config["rules"]:
-            if not self.checkpoint(day, rule["checkpoint"], as_of):
+            cut = self.checkpoint(day, rule["checkpoint"], as_of)
+            if not cut:
+                continue
+            # Compare like checkpoints; a new afternoon signal is not a morning pattern.
+            checkpoint_states = self.states(day, cut)
+            if not all(checkpoint_states.get(k) == "active" for k in rule["allSignals"]):
                 continue
             if not all(states.get(k) == "active" for k in rule["allSignals"]):
                 continue
