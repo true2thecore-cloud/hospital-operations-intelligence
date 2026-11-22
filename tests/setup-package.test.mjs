@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import vm from 'node:vm';
+import {wizardHarness} from './wizard-harness.mjs';
 const root=new URL('../',import.meta.url),read=p=>readFileSync(new URL(p,root),'utf8');
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 test('original canonical files preserved against base manifest',()=>{
@@ -29,4 +30,49 @@ test('perioperative profile includes original morning and afternoon question det
 });
 test('generated Office Script uses supported arrow callbacks and no external calls',()=>{
  const ts=read('scripts/RunReadinessNoPython.ts');assert.doesNotMatch(ts,/\.(?:map|forEach|filter|sort)\([A-Za-z_$][\w$]*\)/);assert.doesNotMatch(ts,/\bfetch\s*\(|:\s*any\b/);assert.equal((ts.match(/function main\(/g)||[]).length,1);
+});
+
+test('each exported prompt has its own unreviewed skeleton with no sample facts',()=>{
+ const w=wizardHarness(),p=JSON.parse(JSON.stringify(w.run('profile')));
+ p.siteLabel='Test Facility';p.meetings.push({...p.meetings[0],key:'new_huddle',label:'New local huddle',focus:'',reportOrder:[],fields:['census']});w.set('profile',p);
+ const files=w.run('kitFiles()');
+ for(const m of p.meetings){
+  const prompt=files['organization/prompts/'+m.key+'.md'].content;
+  const skeleton=JSON.parse(prompt.slice(prompt.indexOf('\n{',prompt.indexOf('## Draft record')),prompt.indexOf('\n\nPopulate arrays')));
+  assert.equal(skeleton.meetingKey,m.key);assert.equal(skeleton.reviewerRole,'REPLACE_WITH_ROLE');
+  for(const key of ['metrics','issues','sources'])assert.deepEqual(skeleton[key],[]);
+  assert.equal(skeleton.date,'REPLACE_WITH_MEETING_DATE');assert.ok(prompt.includes('Meeting name: '+m.label));assert.ok(prompt.includes('Organization: Test Facility'));
+  const marker='Mapped fields (do not rename their keys):\n',start=prompt.indexOf(marker)+marker.length;
+  const fields=JSON.parse(prompt.slice(start,prompt.indexOf('\n\n## Draft record',start)));
+  assert.deepEqual(fields.map(f=>f.key),m.fields);assert.doesNotMatch(prompt,/"value": 28|example-plan-am-2027|"reviewerRole": "Example reviewer"/);
+ }
+ assert.match(files['CONNECTION-SETUP-NOTES.md'].content,/New local huddle: questions or report-out order are blank/);
+});
+
+test('download saves organization edits and includes all prompts without preview',async()=>{
+ const w=wizardHarness();w.element('org').value='Export Test';w.element('site-key').value='export_test';w.element('book-name').value='Export Test.xlsx';w.element('assistant').value='copilot';
+ w.run('go(7)');w.element('next').onclick();assert.equal(w.downloads.length,1);
+ const before=await w.downloads[0].arrayBuffer();const files=w.run('kitFiles()');
+ assert.equal(JSON.parse(files['organization/readiness-profile.json'].content).siteLabel,'Export Test');
+ assert.match(files['START-HERE-YOUR-SETUP.md'].content,/Organization: Export Test/);
+ assert.equal(Object.keys(files).filter(k=>/^organization\/prompts\//.test(k)).length,6);
+ w.element('show-prompt').onclick();w.element('next').onclick();assert.equal(w.downloads.length,2);
+ assert.deepEqual(Buffer.from(await w.downloads[1].arrayBuffer()),Buffer.from(before));
+});
+
+test('email address and browser URL cannot be exported as mailbox folder names',()=>{
+ for(const folders of ['https://mail.example.com/folders/inbox','person@example.com','mailto:person@example.com','Inbox; https://mail.example.com/sent']){
+  const w=wizardHarness(),o=JSON.parse(JSON.stringify(w.run('options')));o.emailFolder=folders;w.set('options',o);
+  assert.throws(()=>w.run('kitFiles()'),/folder names/);
+  w.run('step=7;exportKit()');assert.equal(w.downloads.length,0);assert.match(w.element('error').textContent,/folder names/);
+ }
+ const w=wizardHarness();w.run("options.emailFolder='Inbox; Sent Items; Operations/Transcripts'");assert.doesNotThrow(()=>w.run('kitFiles()'));
+});
+
+test('business transcript folder is mapped separately and pending choices stay unverified',()=>{
+ const w=wizardHarness();w.run("options.sourceFolder='https://example-my.sharepoint.com/my?id=%2Fpersonal%2Fsample%2FDocuments%2FMeetings';profile.workbookLocation='https://1drv.ms/f/c/example';options.brief=true");
+ const files=w.run('kitFiles()'),connections=JSON.parse(files['organization/connections.json'].content),checks=JSON.parse(files['organization/setup-checks.json'].content);
+ assert.equal(connections.rawSources,w.run('options.sourceFolder'));assert.equal(connections.transcriptEmail.folders,'Inbox; Sent Items');assert.equal(connections.verified,false);assert.equal(checks.connectionsVerified,false);
+ assert.equal(checks.configurationValid,true);assert.ok(checks.pending.some(x=>x.includes('actual .xlsx')));assert.ok(checks.pending.some(x=>x.includes('Reviewed Records')));assert.ok(checks.pending.some(x=>x.includes('on demand')));
+ assert.ok(!checks.pending.some(x=>x.includes('Choose a raw-source')));
 });

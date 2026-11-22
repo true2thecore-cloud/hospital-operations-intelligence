@@ -11,6 +11,23 @@ Use this after the manual Excel pilot passes. All steps operate inside the organ
 
 Keep these in approved storage, separate from the GitHub repository. Store flow configuration privately. Start with a small pilot. The Excel connector has file, request, throttling and runtime limits; this workbook engine also fails explicitly before truncating oversized history.
 
+## Map the saved connection references
+
+The exported `organization/connections.json` records user choices. It does not contain authenticated connector bindings or install a flow. Keep `verified` false until actual connection tests pass.
+
+| Saved field | Flow setup |
+| --- | --- |
+| `rawSources` | Choose the approved transcript folder/library, such as Meetings. A business OneDrive/SharePoint folder link is a reference for this selection. |
+| `reviewedRecords` | Select a separate folder containing approved JSON arrays only. Blank means the scheduled intake destination is not set. |
+| `workbook` | Select the actual `.xlsx` file using the Excel action's picker. A destination folder link or sharing URL is not itself a completed file binding. |
+| `transcriptEmail.folders` | Use names such as `Inbox; Sent Items` in the kit, then select/search each folder in the connected mailbox. Do not paste the whole semicolon list into a single-folder connector field. |
+| `transcriptEmail.subjectPrefix` | Use the configured prefix plus meeting identity/date when filtering messages. |
+| `staffing` and `forms` | Select their real workbook sources and configure the companion adapters; enabled is a preference, not proof of access. |
+
+Email addresses and Yahoo/Outlook page URLs are not folder names. Yahoo retrieval is not implemented by this Microsoft route; use an approved separate intake integration or a manually supplied/shared transcript. The Excel worker uses OneDrive for Business or SharePoint-supported storage. A shortened sharing link does not verify storage type or permissions. Review `CONNECTION-SETUP-NOTES.md` in the exported kit before enabling the worker.
+
+Only reviewer-approved records enter the intake folder. Generated prompts leave `reviewerRole` as `REPLACE_WITH_ROLE`; operational intake rejects sample reviewer labels. This validation cannot authenticate the reviewer. Queue permissions and the actual review process provide that control.
+
 ## One scheduled writer, ready-to-map sequence
 
 Create a **Scheduled cloud flow**. Use a 15-minute recurrence for the pilot, or a cadence appropriate to your meeting times. Set **trigger concurrency control to On, degree 1**. Disable concurrent workbook writes from other flows and do not manually run the script while the worker is running.

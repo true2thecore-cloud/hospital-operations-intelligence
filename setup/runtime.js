@@ -102,11 +102,18 @@ function validateOwner(s       ,p         )       {
   check(s.schema===schemaOf(p), 'Historical field meaning/order changed. Use a new workbook or a reviewed migration.');
 }
 function evidenceCheck(items            ,sources          )       { check(Array.isArray(items)&&items.length>0&&items.every(e=>!!e.locator?.trim()&&sources.some(s=>s.id===e.sourceId&&s.status==='available')), 'Every fact needs an available source and exact locator.'); }
+function validateReviewer(role        , mode        )       {
+  const normalized=typeof role==='string'?role.trim().toLowerCase().replace(/[_-]+/g,' ').replace(/\s+/g,' '):'';
+  check(!!normalized && !/^replace\b/.test(normalized) && !/^(draft|unreviewed|not reviewed|not stated|pending|unknown|tbd|n\/a)$/.test(normalized), 'A reviewer must confirm this record; replace the unreviewed placeholder after review.');
+  // Demonstration labels are permitted only in an isolated synthetic workbook.
+  // A role string is an attestation, not authentication. The approved queue controls admission.
+  check(mode==='synthetic' || !/^(example|sample|synthetic|test)(?:\s|$)/.test(normalized), 'Example or synthetic reviewer labels cannot approve an operational record.');
+}
 function ingestRecord(s       ,p         ,input               ,now        )                {
   const r=JSON.parse(JSON.stringify(input))                 ; const nowMs=instantOf(now); validateOwner(s,p);
   check(r.receivedAt===undefined && r.profileHash===undefined, 'Intake timestamps are assigned by the runtime, not the extractor.');
   check(r.version===2 && typeof r.id==='string' && /^[A-Za-z0-9_.-]{1,160}$/.test(r.id), 'Record needs a stable simple revision ID.');
-  check(!!r.reviewerRole?.trim() && r.reviewerRole!=='REPLACE_WITH_ROLE', 'A reviewer must confirm this record.');
+  validateReviewer(r.reviewerRole,p.datasetMode);
   const day=isoDay(r.date); const meeting=p.meetings.find(m=>m.key===r.meetingKey); check(!!meeting, 'Unknown meeting key.');
   check(instantOf(r.endsAt)>=instantOf(r.startsAt) && instantOf(r.endsAt)<=nowMs, 'Meeting must have ended before intake.');
   check(localStamp(instantOf(r.startsAt),p.timezone).slice(0,10)===day, 'Meeting date must match local start date.');

@@ -6,6 +6,11 @@ Run this in a fresh **synthetic** workbook first. Record the flow run ID, script
 | --- | --- |
 | One complete reviewed meeting | Dated meeting sheet, source audit, issues and current snapshot agree with the evidence. |
 | Raw draft / missing reviewer | Rejected before any workbook mutation. |
+| Example/sample reviewer in operational mode | Rejected before writes. Isolated synthetic demonstrations remain usable in synthetic mode. |
+| Export with and without Preview | Identical prompts and configuration for the same saved choices. |
+| Each customized meeting prompt | Its skeleton uses that meeting's key, no invented dates/counts/issues, and REPLACE_WITH_ROLE. |
+| Email URL/address in folder field | Clear validation message; export blocked until folder names are supplied. |
+| Raw-source folder link and incomplete draft choices | Link stays under rawSources. Missing destinations and optional blank meeting guidance are listed in setup notes; access remains unverified. |
 | Missing evidence or wrong numeric type | Rejected; unknown counts are not converted to zero. |
 | AM and PM different counts | Distinct dated meeting records; current metric uses the latest applicable observation. |
 | Tomorrow's cases | Remain upcoming, not today's actual count. |

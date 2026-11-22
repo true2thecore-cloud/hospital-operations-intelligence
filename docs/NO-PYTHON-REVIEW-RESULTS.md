@@ -26,6 +26,15 @@ Review date: November 21, 2026. Branch: `feature/no-python-guided-setup`. Base: 
 
 ## Required before official use
 
+### Follow-up correction review
+
+- Generated meeting prompts now use their own meeting key and an empty unreviewed record skeleton. Canonical synthetic examples remain separate and unchanged.
+- Operational intake rejects example/sample/synthetic/test reviewer labels. Draft placeholders are rejected in both modes. The actual approval process remains an external responsibility; role text is not authentication.
+- Email-folder fields reject browser URLs and mailbox addresses. Exported notes distinguish transcript folders, reviewed-record folders, destination references and actual workbook selection. Incomplete draft meeting guidance remains allowed and listed.
+- 44 Node tests passed, including six new regressions for these corrections; all 34 existing Python tests passed with loopback access for the local HTTP test. The TypeScript 4.0.3 compatibility check passed against the existing Excel API stub.
+- Export tests exercise the shipped wizard functions with a local DOM stub: customization reaches the download, and clicking Preview does not change ZIP contents. These are automated export checks, not a new visual or tenant acceptance review.
+- Original operational prompts, skills, source templates and Python code remain byte-identical. Organization-specific configuration and corrected downloads stay outside the reusable repository.
+
 The script has not run inside the organization's Office Scripts host in this review. The actual tenant must verify script compilation/execution, workbook save/refresh appearance, source permissions, Power Automate retry/concurrency behavior, date queue operation, licenses/DLP and workload limits. The stub/compiler and workbook adapter do not replace those checks.
 
 The action map is not an import-tested Power Platform solution. Source retrieval, AI extraction, optional messages and spoken delivery still require approved local connections/actions. No email, transcript, staffing data or credentials were sent through the wizard, and no cloud agent or scheduled flow was installed.

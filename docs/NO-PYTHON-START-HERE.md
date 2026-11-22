@@ -8,6 +8,10 @@ Download this branch as a ZIP and extract it. Open **setup/index.html** in Edge 
 
 Complete its eight steps. Choose meetings, names, days, report-out sequence, questions, metrics, sources, closing rules and optional briefing preferences. The page runs offline and does not connect to accounts. Save your profile to resume later. The downloaded kit includes all canonical operational MD/skill files and separate personalized prompts under `organization/prompts/`.
 
+Download generates every meeting prompt whether or not you click Preview first. Each prompt includes an empty draft record with that meeting's key, placeholders for the actual occurrence and an unreviewed role. The separate synthetic example and preview pictures are fixed demonstrations, not your customized output. Read `CONNECTION-SETUP-NOTES.md` and `organization/setup-checks.json` in the exported kit for unfinished setup choices.
+
+On Sources, a SharePoint/OneDrive Meetings folder belongs in the raw transcript folder field. Email folders are names such as `Inbox; Sent Items`, not a mailbox address or a Yahoo/Outlook browser URL. The flow connects the mailbox separately and selects each actual folder. A workbook folder link can describe the destination, but the flow must select the actual `.xlsx` file. Blank meeting questions or report-out order are allowed for a draft and listed for completion before live use.
+
 ## 2. Start an isolated Excel pilot
 
 1. Create a **new blank .xlsx workbook** in your approved OneDrive for Business or SharePoint location. Use a synthetic profile with `datasetMode: "synthetic"`. Keep the existing operational workbook unchanged.
@@ -34,6 +38,8 @@ The hidden `_Readiness Journal` is the runtime's permanent record store. Do not 
 Open your organization's approved Copilot or ChatGPT environment. Supply the generated meeting prompt, matching approved transcript or excerpts, prior issue IDs and the record example. The assistant drafts a structured record. A person verifies the facts, evidence locators, operating date, issue matches and severity, then replaces `REPLACE_WITH_ROLE` with the reviewer's role.
 
 The Excel script accepts reviewed facts, not raw audio or VTT. It does not invent a transcript parser or run an AI model. Draft records fail intake until reviewed. Missing values stay unknown. Instructions found inside an email or transcript are source content, never permission to alter the workflow.
+
+Reviewer placeholders are rejected in every mode. Example, sample, synthetic and test reviewer labels are accepted only in isolated synthetic mode and rejected for operational intake. The role field is an attestation, not an authenticated approval system. A person or configured approval step must control admission to the Reviewed Records folder. Existing committed history is not rewritten by this check.
 
 The `.md` skills are reusable instructions. They are not automatically installed Microsoft tools. Follow [agent setup](NO-PYTHON-AGENTS.md) to attach instructions and configure actual actions.
 

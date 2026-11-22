@@ -169,7 +169,7 @@
   },
   {
     "path": "docs/NO-PYTHON-ACCEPTANCE.md",
-    "sha256": "cf1690c2b966fa4ba149ef249380753cc109615198869b5dcda211c9631768e2"
+    "sha256": "dc872d3db5fdfe6a43a18ef592d04af26ebd90c09768c553567e76d3d7a86805"
   },
   {
     "path": "docs/NO-PYTHON-AGENTS.md",
@@ -177,11 +177,11 @@
   },
   {
     "path": "docs/NO-PYTHON-AUTOMATION.md",
-    "sha256": "0224b576507300e00b810f6536efa96bf86e99455ed9833dd3f2dd79f610522c"
+    "sha256": "5913bdfd727c78cfefc434b928d74b24aaf8668b7eadccac8f38740ef8791c2a"
   },
   {
     "path": "docs/NO-PYTHON-REVIEW-RESULTS.md",
-    "sha256": "925e4d6982d8a2b4045f7aaad6f0332f315a15354b1ba8e4e6bff5a304c13bde"
+    "sha256": "c249f634a33433f46a621fef412ae167f2c1229a95dac694c04ecdc9afe71969"
   },
   {
     "path": "docs/NO-PYTHON-SOURCE-VERIFICATION.md",
@@ -189,7 +189,7 @@
   },
   {
     "path": "docs/NO-PYTHON-START-HERE.md",
-    "sha256": "8eb1f08deec633303c156c03c822152f404adc3b2c402159d4df45dfe35a6cf9"
+    "sha256": "3ec76087c91500396f78a08ed719868e3b2dc68d9060bde75ad85818d600ab25"
   },
   {
     "path": "docs/ONBOARDING.md",
@@ -229,7 +229,7 @@
   },
   {
     "path": "scripts/RunReadinessNoPython.ts",
-    "sha256": "c11424090529d6a7702479ca31a1dce360a8b4cd23ad4c73ebc312b392a3ec56"
+    "sha256": "316dbbce7a5fa071bfb62f6e60e4f16b0efbc6da57279e105ccef655de4decb6"
   },
   {
     "path": "scripts/UpdateReadinessWorkbook.ts",
