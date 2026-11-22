@@ -1,5 +1,16 @@
 # Hospital Operations Intelligence
-> **Development preview: easier no-Python setup.** Open [the no-Python Start Here guide](docs/NO-PYTHON-START-HERE.md), or download this branch and open `setup/index.html`. The wizard generates personalized prompts and a complete Excel update script while preserving this operational framework. Microsoft connections still require local setup and acceptance. See [original-source verification](docs/NO-PYTHON-SOURCE-VERIFICATION.md).
+
+**Start with the guided HTML setup wizard. No Python installation is needed for this setup path.**
+
+1. Select **Code → Download ZIP** on this repository.
+2. Extract the ZIP, then open **setup/index.html** in Edge or Chrome. GitHub’s file view shows code; the downloaded HTML file opens the wizard.
+3. Follow the eight steps to choose meetings, questions, sources and timing, then download your personalized kit.
+
+The wizard preserves the operational prompts, Markdown files, skills and templates. It generates meeting-specific prompts, configuration, connection setup notes and the complete Excel processing script.
+
+**Deployment status:** the reusable wizard is included in the regular repository as a development preview. Microsoft connections and live workbook updates still require local setup and acceptance. Keep your organization-specific settings and links in private storage, outside this repository.
+
+Continue with [the no-Python Start Here guide](docs/NO-PYTHON-START-HERE.md) and [original-source verification](docs/NO-PYTHON-SOURCE-VERIFICATION.md).
 
 
 **Configurable meeting-to-workbook operations intelligence, with a surgical operations worked example.** Preserve meeting evidence, update the executive view, retain permanent daily records and prepare role-specific briefs.
