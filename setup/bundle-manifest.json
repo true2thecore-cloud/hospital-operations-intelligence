@@ -1,0 +1,286 @@
+[
+  {
+    "path": "agents/no-python-setup-agent.md",
+    "sha256": "dbad6218746ac23e6e55495a4dc8b474fa450357b7c69cabc36a1e80645d11c3"
+  },
+  {
+    "path": "agents/operations-agent.md",
+    "sha256": "dc3c56e34134d348a07aef3785c24f4d63e27f13f38ff1f66e758d2502758b64"
+  },
+  {
+    "path": "skills/daily-executive-brief/SKILL.md",
+    "sha256": "15c6ccb8bdfa68c80afbd6cdd1209c13e3ecaefe3adaa0bf586b6cbb24d8bc67"
+  },
+  {
+    "path": "skills/daily-readiness-refresh/SKILL.md",
+    "sha256": "64147d1edc107db65257fe240bc590f13aed98ae4e5eecf74c36498a54adb5c7"
+  },
+  {
+    "path": "skills/meeting-follow-through/SKILL.md",
+    "sha256": "b572bb5e7515121c7fa8bb634c04e260ffad6b09350de9b4834eb952e4d82b0b"
+  },
+  {
+    "path": "skills/organization-onboarding/SKILL.md",
+    "sha256": "f356d6474dc9a0f2744117963834bd0d3a97cacaae75a1bfa097a3185f417be9"
+  },
+  {
+    "path": "skills/pattern-review/SKILL.md",
+    "sha256": "1aca393ca82df583b8d9ece2406d27148db90b5628aea5e9d6e20a25f659c7c1"
+  },
+  {
+    "path": "skills/transcript-intake/SKILL.md",
+    "sha256": "c1cb92a9c5eab87f9fb17e114dc551724cdf86510b0722792c986b39baa35a2f"
+  },
+  {
+    "path": "prompts/extract-meeting.md",
+    "sha256": "393ae9ea663b3827118a6be7498b3170d1476a42613aebf5379fdc94145e471a"
+  },
+  {
+    "path": "prompts/leadership-brief.md",
+    "sha256": "2536e9aefd6e829f0a6b570288530feebe2bf2f5b8a716782b329e523e498a0b"
+  },
+  {
+    "path": "prompts/meeting-extraction.md",
+    "sha256": "8c4044bbb65b150aceb73fe7dcfbca16ae4585f0986bf96062a40a2b97b8ae53"
+  },
+  {
+    "path": "prompts/perioperative-plan-ahead-am.md",
+    "sha256": "21f408f9b71caaf0396973e72b0d41149acf66a488491545a07954d72de1619b"
+  },
+  {
+    "path": "prompts/perioperative-plan-ahead-pm.md",
+    "sha256": "3dc43d9fb683683c999116d34b488327e704f07d97dd70610e68936956744dde"
+  },
+  {
+    "path": "templates/Daily Operational Readiness.xlsx",
+    "sha256": "f355bbabb835780749034b2348787af354ffd0bf05439da2c967eea2f040eb7a"
+  },
+  {
+    "path": "templates/acceptance-checklist.csv",
+    "sha256": "841696e3d3b4e1cf6cecdd82bc144460db51389161af7bf7f79ce73dc22476a3"
+  },
+  {
+    "path": "templates/afternoon-plan-ahead.md",
+    "sha256": "9e2ee8cbad4cb6baef27700b23fdcc634881b5415a1c8b12153ba2485868ab8e"
+  },
+  {
+    "path": "templates/block-schedule.example.json",
+    "sha256": "d733bf729bef9a0945831daf661ccdab81a02e014cb0e1cfde2dcaa26a3e080c"
+  },
+  {
+    "path": "templates/meeting-field-map.csv",
+    "sha256": "357697f2839ce39801e6f2a3a006c6294dafef6403545b4af5e71e183779a928"
+  },
+  {
+    "path": "templates/meeting-register.csv",
+    "sha256": "2f73696d8e8abb5d5ec2e3d86fa0100e04256371a3b657357331b25751a69206"
+  },
+  {
+    "path": "templates/meeting.example.json",
+    "sha256": "8995cfcb7f2e50bb7336ad421313a94371869859d6d7243275ac71287f6c9317"
+  },
+  {
+    "path": "templates/morning-plan-ahead.md",
+    "sha256": "ebe31039d412f3752fb8fb733b0764f830f3fe80fffe0b0c133ab4ede191797d"
+  },
+  {
+    "path": "templates/outcome-register.csv",
+    "sha256": "b8c48db2cc8de2a715d988decd43ccfade46b50d5e4b46665e8cd4523b34fbf5"
+  },
+  {
+    "path": "templates/review.example.json",
+    "sha256": "72ddf2296abd091957db5799e59bec403f25f43f6a867bccaf5c9b4647768299"
+  },
+  {
+    "path": "templates/reviewed-meeting.example.json",
+    "sha256": "73c5317b4acfb91d86c87e622dd2557d2eed5b670a5adda96eb9e7bb01e55052"
+  },
+  {
+    "path": "templates/source-register.csv",
+    "sha256": "e59334610aef9ce351475d2cea118344a0a05d4a673156bde4d9be653993a8ad"
+  },
+  {
+    "path": "config/readiness.example.json",
+    "sha256": "81515636eff3bdc59f17015e913d3df042486787e999ec09d84cf7571a587052"
+  },
+  {
+    "path": "config/readiness.perioperative-no-python.json",
+    "sha256": "87ea2616f256706a6f2e1bc302f3afc3438244c3fa41f1e8d46c8b8ccdb60c85"
+  },
+  {
+    "path": "config/site.example.json",
+    "sha256": "d6996602104e8ff494ecca8590c27656e59675b3273753055668c68a90afe9f8"
+  },
+  {
+    "path": "automation/action-manifest.json",
+    "sha256": "2a324a83af9a0bf1b2215bb99e0d671937f9a5e357cfbca991801bf53aa19ccd"
+  },
+  {
+    "path": "automation/connection-map.json",
+    "sha256": "c121c7ce3c152ffe8cf20af852b0daf1402eeaf14b157c5127101fec5c2c0bea"
+  },
+  {
+    "path": "automation/custom-connector.swagger2.json",
+    "sha256": "e4ef002a40ed3bb389af9cce1f5eb8f6634c687a9486dfff01aede0ae3c4e35c"
+  },
+  {
+    "path": "automation/flow-outline.json",
+    "sha256": "96044574f4a7dd2be2e7328fe21f09ee797c0d54b099cdf7b0d38b70f5ee0762"
+  },
+  {
+    "path": "automation/no-python-workflow.json",
+    "sha256": "b99afb6807650294d36ad33b2e6bf09a3e64a40bc6d8403d99c15f482efff661"
+  },
+  {
+    "path": "docs/ARCHITECTURE.md",
+    "sha256": "37538561d074380e9f03a318d1f2f9926b99e8d404de4ad8aac71a10d9507b7b"
+  },
+  {
+    "path": "docs/AUTOMATION-SETUP.md",
+    "sha256": "65b5fc2476f8df3843e8ef47e6967e45aa8d073705c786b85e2a026bd9e93f4d"
+  },
+  {
+    "path": "docs/COMPANION.md",
+    "sha256": "0438aa8c86f8a639ad1c146aaf477efa8a9f88d976b05bf91888829fd6f4360c"
+  },
+  {
+    "path": "docs/COPILOT-STUDIO.md",
+    "sha256": "6d260cea485db9101028d79616598f316f8ef9e99236054cd8ee1a8a74295533"
+  },
+  {
+    "path": "docs/CUSTOMIZATION.md",
+    "sha256": "24db1602bac47644352d30a058e9eecf9fd4912694508b18cfc47ddf111118ff"
+  },
+  {
+    "path": "docs/DATA-CONTRACTS.md",
+    "sha256": "38a73cfbaeefc76bd4be1c4ee2f6c0d0765787b7a673cc4be117760e4f728c3f"
+  },
+  {
+    "path": "docs/DATA-HANDLING.md",
+    "sha256": "b82553d47499d6a28fd4c3cf9bccc9bd7b7c4763974a8efe46dc720d0a25d3cb"
+  },
+  {
+    "path": "docs/LEARNING.md",
+    "sha256": "b2aa31f139731dea972ae107d29b3d2f3df09f47709fd59e24d1e800b4f59a14"
+  },
+  {
+    "path": "docs/MICROSOFT-365.md",
+    "sha256": "3aaf8a432ac7e9249d20b03ee79ee33c15b49bd3427bede5f043c8b207de5e6e"
+  },
+  {
+    "path": "docs/NO-PYTHON-ACCEPTANCE.md",
+    "sha256": "dc872d3db5fdfe6a43a18ef592d04af26ebd90c09768c553567e76d3d7a86805"
+  },
+  {
+    "path": "docs/NO-PYTHON-AGENTS.md",
+    "sha256": "bd4d71eb50f3a8cfa7e1faf47e1da62deafc8aa304f9b67277f063add8341365"
+  },
+  {
+    "path": "docs/NO-PYTHON-AUTOMATION.md",
+    "sha256": "5913bdfd727c78cfefc434b928d74b24aaf8668b7eadccac8f38740ef8791c2a"
+  },
+  {
+    "path": "docs/NO-PYTHON-REVIEW-RESULTS.md",
+    "sha256": "c249f634a33433f46a621fef412ae167f2c1229a95dac694c04ecdc9afe71969"
+  },
+  {
+    "path": "docs/NO-PYTHON-SOURCE-VERIFICATION.md",
+    "sha256": "0c0a4e2b338223bcb739ade0865a33d722d5f7b5210b0c67d0e03d4b5db9f26c"
+  },
+  {
+    "path": "docs/NO-PYTHON-START-HERE.md",
+    "sha256": "3ec76087c91500396f78a08ed719868e3b2dc68d9060bde75ad85818d600ab25"
+  },
+  {
+    "path": "docs/ONBOARDING.md",
+    "sha256": "1a424e1ebabeb2d5db7be6002bf1a7607ae3bdafa0005eda7aa636a65f785c38"
+  },
+  {
+    "path": "docs/PORTABLE-SETUP.md",
+    "sha256": "5be44ad89b910144a2adc19b34eb4a6f9d9c37f2849eb87472b2458671275b8c"
+  },
+  {
+    "path": "docs/READINESS-QUICKSTART.md",
+    "sha256": "b7e158b513d18db3350770d38792730081161bae058fd9b83623fd8a89de4aa6"
+  },
+  {
+    "path": "docs/SOURCE-TRACEABILITY.md",
+    "sha256": "09d0734b9d011d56113fc542686430e297ff66ba89bbd33d740eb6e24e579558"
+  },
+  {
+    "path": "docs/START-HERE.md",
+    "sha256": "222a5cf3ac478911bf72e0b5cda0b3ff02364dcce735e21ae643540cb0088415"
+  },
+  {
+    "path": "docs/TROUBLESHOOTING.md",
+    "sha256": "f7ecad999bf25ce7faf2910a2e849eaeaddeb351920de5afe5e90d4cd1f320d5"
+  },
+  {
+    "path": "docs/VALIDATION.md",
+    "sha256": "b35b463343bf7e1224ecdc60fbaa42fa2f53cc9db2b4ce1b570a23056291bbcf"
+  },
+  {
+    "path": "docs/WORKFLOW-SPECIFICATION.md",
+    "sha256": "4b5e222feca139d9a12d401cebfa5e9fcec8257fc78d88dd4c113a10da5c966e"
+  },
+  {
+    "path": "scripts/ImportOperationsBrief.ts",
+    "sha256": "f7bb2686aba8467c95bf5ad5b8dc2ac4bf9e50e49723175f50d82e71c25eb666"
+  },
+  {
+    "path": "scripts/RunReadinessNoPython.ts",
+    "sha256": "316dbbce7a5fa071bfb62f6e60e4f16b0efbc6da57279e105ccef655de4decb6"
+  },
+  {
+    "path": "scripts/UpdateReadinessWorkbook.ts",
+    "sha256": "f9d532c7549c260c90258770982032ff68212d330da57d8f018fbb2779f94b87"
+  },
+  {
+    "path": "examples/morning.vtt",
+    "sha256": "bbb44570298710d70b4a46b870c58fca26607ed36dacf3bfb8a154ae5312c5af"
+  },
+  {
+    "path": "examples/readiness-profile.json",
+    "sha256": "2c556b89f22df43cd0c3260d8b87961fe3e30017865ff494eb64ed341418c74d"
+  },
+  {
+    "path": "examples/readiness.vtt",
+    "sha256": "eb496229097a1935712da4bf3d16a3a6152ec70810769cb077dcb5b5a10b1fd4"
+  },
+  {
+    "path": "assets/Readiness Synthetic Example.xlsx",
+    "sha256": "ae28e2311e042c849a5b82559181cd774b532275115acf9451940ddfe8e5d41e"
+  },
+  {
+    "path": "assets/example-brief.csv",
+    "sha256": "a3d2e81b04c385a50a79b74e25bdce59417c7fe1492f6f99d21cec5cc5dab937"
+  },
+  {
+    "path": "assets/example-brief.json",
+    "sha256": "cf86cc70c89f544b64cd4b42f4554457d42a2c3aa55dab854f895aaf85f28f77"
+  },
+  {
+    "path": "assets/example-evaluation.json",
+    "sha256": "4297fc55082d8b62ea8d012e052954d7e58e05e5904687d53b79af0dc176a52c"
+  },
+  {
+    "path": "assets/operations-preview.png",
+    "sha256": "61d96021a3f7220dac5875b7dd78f59c1c32147b1d638cc5ca77bab78f2fab27"
+  },
+  {
+    "path": "assets/readiness-example.json",
+    "sha256": "2d2d096b061bb232852d223754b892691c598f714a4534341e042528c53770b7"
+  },
+  {
+    "path": "assets/readiness-preview.png",
+    "sha256": "ffde47423e542c4c2e339d8cd693a1ab8d97f7180ab595a6dfcce751d8c948bf"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "f3081fcceda962195fc2a70e56886da7d54d4759f0691d1eb1636a88a2da174c"
+  },
+  {
+    "path": "README.md",
+    "sha256": "59955a0fa32d24a16f33a07eef38a9504bb7ec2e2ceed356a3cb69a0994a60d7"
+  }
+]

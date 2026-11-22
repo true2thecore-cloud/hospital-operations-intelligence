@@ -1,0 +1,640 @@
+{
+  "version": 2,
+  "siteKey": "your_hospital",
+  "siteLabel": "Your Hospital",
+  "datasetMode": "operational",
+  "timezone": "America/New_York",
+  "closingTime": "23:00",
+  "transcriptDelayMinutes": 60,
+  "workbookName": "Daily Operational Readiness.xlsx",
+  "workbookLocation": "REPLACE_WITH_APPROVED_LOCATION",
+  "meetings": [
+    {
+      "key": "safety_am",
+      "label": "Morning safety huddle",
+      "end": "08:45",
+      "weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fields": [
+        "census",
+        "capacity_pct",
+        "anticipated_discharges",
+        "early_discharges",
+        "or_cases",
+        "cardiac_cases",
+        "or_bed_demand",
+        "surgical_beds",
+        "intermediate_beds",
+        "medical_beds",
+        "specialty_beds",
+        "gyn_beds",
+        "neuro_icu_beds",
+        "cath_cases",
+        "cath_bed_demand",
+        "rn_required",
+        "tech_required",
+        "sitters_required",
+        "telemetry_demand",
+        "staffing_ratio",
+        "tray_readiness",
+        "escalation_description",
+        "throughput_risk",
+        "escalation_flag",
+        "source_confidence"
+      ],
+      "focus": "Census, capacity, discharges, staffing, safety and throughput constraints.",
+      "sourceRoute": "manual_vtt",
+      "calendarMatch": "",
+      "reportOrder": [
+        "Department role",
+        "Charge role",
+        "Operations leader"
+      ]
+    },
+    {
+      "key": "plan_am",
+      "label": "Morning Plan Ahead",
+      "end": "09:30",
+      "weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "fields": [
+        "census",
+        "capacity_pct",
+        "anticipated_discharges",
+        "early_discharges",
+        "or_cases",
+        "cardiac_cases",
+        "or_bed_demand",
+        "surgical_beds",
+        "intermediate_beds",
+        "medical_beds",
+        "specialty_beds",
+        "gyn_beds",
+        "neuro_icu_beds",
+        "cath_cases",
+        "cath_bed_demand",
+        "rn_required",
+        "tech_required",
+        "sitters_required",
+        "telemetry_demand",
+        "staffing_ratio",
+        "tray_readiness",
+        "escalation_description",
+        "throughput_risk",
+        "anesthesia_tomorrow",
+        "rooms_running",
+        "or_rn_available",
+        "or_cst_available",
+        "remaining_preop",
+        "remaining_pacu",
+        "preop_staff",
+        "pacu_staff",
+        "phase2_staff",
+        "escalation_flag",
+        "source_confidence"
+      ],
+      "focus": "# Morning perioperative report-out template\n\nConfigurable worked example adapted from the supplied morning meeting structure. Ask only the questions relevant to the organization. Capture reported facts, current barriers, mitigation, owner and next checkpoint. Do not infer clinical clearance, invent add-ons or make clinical decisions. Keep personal coaching matters out of a broadly shared operations workbook.\n\n1. **On-time starts and rounding:** Were starts delayed? What did the reporting team identify as the cause, what mitigation was reported, and what follow-up could prevent recurrence? What rounding identified a near miss or useful standard-work improvement?\n2. **Cardiac services:** Report call-outs, start delays, corrective follow-up, explicitly known pending cases and other documented concerns.\n3. **Preoperative:** Report call-outs, remaining case flow, receiving/ICU coordination needs, handoff documentation, transport barriers, reported H&P/order/laterality concerns and mitigation. Include only known add-ons and documented late-room coverage needs.\n4. **PACU:** Report call-outs, case-flow constraints, occupancy and receiving-bed information, transport needs, planned admissions and documented receiving arrangements. Separate available beds from anticipated discharges and future demand.\n5. **OR charge:** Report breaks/lunch coverage, reported compliance/environment checks and defects, work orders or assigned corrections, rounding observations, rooms expected to continue at 3 PM/5 PM and coverage beyond call teams. Carry early-start notifications to the afternoon follow-up.\n6. **SPD:** Report call-outs, turnover tray needs, vendor/representative tray status, delivery uncertainty and afternoon tray plans. A tray is not ready solely because a delivery was expected.\n7. **Specialty coordinators and infection prevention:** Report special-case flow constraints, awareness items and outstanding follow-up within approved scope.\n8. **Biomed:** Report broken beds, ESUs or specialty equipment; available backup if confirmed; service/work-order reference; ordered/received items; and unresolved or mitigated concerns.\n9. **Throughput/support lead:** Report staffing gaps, bed/stretcher availability, team-huddle concerns, documented environmental/equipment defects and assigned ownership. Do not convert a missing check into a completed check.\n10. **Patient-experience/documentation role:** Report operational chart-readiness concerns already communicated to the responsible team, planned rounding/discharge flow, reported mitigation and remaining follow-up. Use aggregated operational details where possible.\n11. **Supply chain:** Report new backorders, confirmed implant availability, low-supply concerns, request responses and outstanding items.\n12. **Assistant managers/service leaders:** Report preference-card/laterality concerns, case sequencing dependencies, equipment/supply needs for tomorrow, correct specialty room assignments, coordinator concerns and coverage over the next few days. Include documented extra-room utilization. Separate follow-up actions from unsupported recommendations.\n\nFor every extracted numeric metric, use the configured key, units, observed time and applicable operating date. For issues, use stable issue ID, original event date, validated severity or UNKNOWN, current state, evidence cue, and stated owner/action/due. Missing numeric observations are omitted; missing sources are logged explicitly. Report AM facts separately from later revisions. Use the common extraction prompt and version-2 record contract.\n",
+      "sourceRoute": "manual_vtt",
+      "calendarMatch": "",
+      "reportOrder": [
+        "On-time starts and rounding",
+        "Cardiac services",
+        "PreOp",
+        "PACU",
+        "OR charge",
+        "SPD",
+        "Specialty and infection prevention",
+        "Biomed",
+        "Throughput/support",
+        "Patient experience/documentation",
+        "Supply chain",
+        "Assistant managers/service leaders"
+      ]
+    },
+    {
+      "key": "plan_pm",
+      "label": "Afternoon Plan Ahead",
+      "end": "14:30",
+      "weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "fields": [
+        "census",
+        "capacity_pct",
+        "anticipated_discharges",
+        "early_discharges",
+        "or_cases",
+        "cardiac_cases",
+        "or_bed_demand",
+        "surgical_beds",
+        "intermediate_beds",
+        "medical_beds",
+        "specialty_beds",
+        "gyn_beds",
+        "neuro_icu_beds",
+        "cath_cases",
+        "cath_bed_demand",
+        "rn_required",
+        "tech_required",
+        "sitters_required",
+        "telemetry_demand",
+        "staffing_ratio",
+        "tray_readiness",
+        "escalation_description",
+        "throughput_risk",
+        "anesthesia_tomorrow",
+        "rooms_running",
+        "or_rn_available",
+        "or_cst_available",
+        "remaining_preop",
+        "remaining_pacu",
+        "preop_staff",
+        "pacu_staff",
+        "phase2_staff",
+        "escalation_flag",
+        "source_confidence"
+      ],
+      "focus": "# Afternoon perioperative follow-up template\n\nConfigurable worked example adapted from the supplied afternoon staffing/throughput meeting. Typical reporting roles: OR charge, PACU charge, PreOp charge, Phase 2 charge and assistant manager. Confirm local roles and timing.\n\nCapture what changed since the morning and what is explicitly known for the rest of today and tomorrow:\n\n- Anesthesia availability for tomorrow, with the applicable date.\n- Rooms still running and afternoon OR RN/CST coverage.\n- Cases remaining to PreOp and cases remaining to PACU, as distinct reported counts.\n- Staff available in PreOp, PACU and Phase 2.\n- Confirmed support for holds after the configured evening cutoff, including owner and next check if stated.\n- Tomorrow's OR room staffing and specialty-room assignments.\n- Early-start notifications, tray/equipment/supply dependencies, known coverage gaps and their follow-up.\n- Explicit resolutions, continuing barriers and new escalations. Keep the morning issue ID and original event date when the same issue is resolved or continued.\n\nThe original example also contained a local patient-movement/ambulation practice. Do not turn it into a universal clinical protocol. Each organization supplies its own approved practice; capture reported operational implications and responsible follow-up only.\n\nPreserve the meeting's date, observed time and operating date of every count. Tomorrow's anesthesia or room plan is an upcoming metric, not today's actual staffing. Do not infer case totals or staffing ratios from incomplete statements. Use the common extraction prompt and version-2 record contract, with reviewer approval before workbook intake.\n",
+      "sourceRoute": "manual_vtt",
+      "calendarMatch": "",
+      "reportOrder": [
+        "OR charge",
+        "PACU charge",
+        "PreOp charge",
+        "Phase 2 charge",
+        "Assistant manager"
+      ]
+    },
+    {
+      "key": "operations",
+      "label": "Operations huddle",
+      "end": "16:00",
+      "weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fields": [
+        "census",
+        "capacity_pct",
+        "anticipated_discharges",
+        "early_discharges",
+        "or_cases",
+        "cardiac_cases",
+        "or_bed_demand",
+        "surgical_beds",
+        "intermediate_beds",
+        "medical_beds",
+        "specialty_beds",
+        "gyn_beds",
+        "neuro_icu_beds",
+        "cath_cases",
+        "cath_bed_demand",
+        "rn_required",
+        "tech_required",
+        "sitters_required",
+        "telemetry_demand",
+        "staffing_ratio",
+        "tray_readiness",
+        "escalation_description",
+        "throughput_risk",
+        "escalation_flag",
+        "source_confidence"
+      ],
+      "focus": "Discharges, receiving capacity, PACU holds, staffing and carry-forward concerns.",
+      "sourceRoute": "manual_vtt",
+      "calendarMatch": "",
+      "reportOrder": [
+        "Department role",
+        "Charge role",
+        "Operations leader"
+      ]
+    },
+    {
+      "key": "safety_pm",
+      "label": "Evening safety huddle",
+      "end": "21:00",
+      "weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fields": [
+        "census",
+        "capacity_pct",
+        "anticipated_discharges",
+        "early_discharges",
+        "or_cases",
+        "cardiac_cases",
+        "or_bed_demand",
+        "surgical_beds",
+        "intermediate_beds",
+        "medical_beds",
+        "specialty_beds",
+        "gyn_beds",
+        "neuro_icu_beds",
+        "cath_cases",
+        "cath_bed_demand",
+        "rn_required",
+        "tech_required",
+        "sitters_required",
+        "telemetry_demand",
+        "staffing_ratio",
+        "tray_readiness",
+        "escalation_description",
+        "throughput_risk",
+        "escalation_flag",
+        "source_confidence"
+      ],
+      "focus": "Overnight capacity, staffing, safety and concerns that affect the next operating day.",
+      "sourceRoute": "manual_vtt",
+      "calendarMatch": "",
+      "reportOrder": [
+        "Department role",
+        "Charge role",
+        "Operations leader"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "key": "census",
+      "label": "Hospital census",
+      "type": "number",
+      "unit": "patients",
+      "min": 0,
+      "definition": "Explicitly reported hospital census. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": true
+    },
+    {
+      "key": "capacity_pct",
+      "label": "Capacity",
+      "type": "number",
+      "unit": "percent",
+      "min": 0,
+      "definition": "Explicitly reported capacity. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": true
+    },
+    {
+      "key": "anticipated_discharges",
+      "label": "Anticipated discharges",
+      "type": "number",
+      "unit": "patients",
+      "min": 0,
+      "definition": "Explicitly reported anticipated discharges. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": true
+    },
+    {
+      "key": "early_discharges",
+      "label": "Early discharges identified",
+      "type": "number",
+      "unit": "patients",
+      "min": 0,
+      "definition": "Explicitly reported early discharges identified. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": true
+    },
+    {
+      "key": "or_cases",
+      "label": "OR cases",
+      "type": "number",
+      "unit": "cases",
+      "min": 0,
+      "definition": "Explicitly reported or cases. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": true
+    },
+    {
+      "key": "cardiac_cases",
+      "label": "Cardiac OR cases",
+      "type": "number",
+      "unit": "cases",
+      "min": 0,
+      "definition": "Explicitly reported cardiac or cases. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": false
+    },
+    {
+      "key": "or_bed_demand",
+      "label": "OR bed demand",
+      "type": "number",
+      "unit": "beds",
+      "min": 0,
+      "definition": "Explicitly reported or bed demand. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": true
+    },
+    {
+      "key": "surgical_beds",
+      "label": "Surgical unit demand",
+      "type": "number",
+      "unit": "beds",
+      "min": 0,
+      "definition": "Explicitly reported surgical unit demand. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": false
+    },
+    {
+      "key": "intermediate_beds",
+      "label": "Intermediate care demand",
+      "type": "number",
+      "unit": "beds",
+      "min": 0,
+      "definition": "Explicitly reported intermediate care demand. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": false
+    },
+    {
+      "key": "medical_beds",
+      "label": "Medical unit demand",
+      "type": "number",
+      "unit": "beds",
+      "min": 0,
+      "definition": "Explicitly reported medical unit demand. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": false
+    },
+    {
+      "key": "specialty_beds",
+      "label": "Specialty unit demand",
+      "type": "number",
+      "unit": "beds",
+      "min": 0,
+      "definition": "Explicitly reported specialty unit demand. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": false
+    },
+    {
+      "key": "gyn_beds",
+      "label": "Gynecology demand",
+      "type": "number",
+      "unit": "beds",
+      "min": 0,
+      "definition": "Explicitly reported gynecology demand. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": false
+    },
+    {
+      "key": "neuro_icu_beds",
+      "label": "Neuro ICU demand",
+      "type": "number",
+      "unit": "beds",
+      "min": 0,
+      "definition": "Explicitly reported neuro icu demand. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": false
+    },
+    {
+      "key": "cath_cases",
+      "label": "Cath lab cases",
+      "type": "number",
+      "unit": "cases",
+      "min": 0,
+      "definition": "Explicitly reported cath lab cases. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": true
+    },
+    {
+      "key": "cath_bed_demand",
+      "label": "Cath lab bed demand",
+      "type": "number",
+      "unit": "beds",
+      "min": 0,
+      "definition": "Explicitly reported cath lab bed demand. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": false
+    },
+    {
+      "key": "rn_required",
+      "label": "RN requirement reported",
+      "type": "number",
+      "unit": "people",
+      "min": 0,
+      "definition": "Explicitly reported rn requirement reported. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": false
+    },
+    {
+      "key": "tech_required",
+      "label": "Tech requirement reported",
+      "type": "number",
+      "unit": "people",
+      "min": 0,
+      "definition": "Explicitly reported tech requirement reported. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": false
+    },
+    {
+      "key": "sitters_required",
+      "label": "Sitter requirement reported",
+      "type": "number",
+      "unit": "people",
+      "min": 0,
+      "definition": "Explicitly reported sitter requirement reported. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": false
+    },
+    {
+      "key": "telemetry_demand",
+      "label": "Telemetry requirement reported",
+      "type": "number",
+      "unit": "patients",
+      "min": 0,
+      "definition": "Explicitly reported telemetry requirement reported. Preserve observation time and applicable operating date. Do not infer missing values.",
+      "executive": false
+    },
+    {
+      "key": "staffing_ratio",
+      "label": "Staffing ratio reported",
+      "type": "text",
+      "unit": "",
+      "definition": "Explicitly reported staffing ratio reported. No inferred clearance or severity.",
+      "executive": false
+    },
+    {
+      "key": "tray_readiness",
+      "label": "Vendor tray readiness",
+      "type": "text",
+      "unit": "",
+      "definition": "Explicitly reported vendor tray readiness. No inferred clearance or severity.",
+      "executive": false
+    },
+    {
+      "key": "escalation_description",
+      "label": "Escalation description",
+      "type": "text",
+      "unit": "",
+      "definition": "Explicitly reported escalation description. No inferred clearance or severity.",
+      "executive": true
+    },
+    {
+      "key": "throughput_risk",
+      "label": "Throughput risk reported",
+      "type": "text",
+      "unit": "",
+      "definition": "Explicitly reported throughput risk reported. No inferred clearance or severity.",
+      "executive": true
+    },
+    {
+      "key": "anesthesia_tomorrow",
+      "label": "Anesthesia availability reported",
+      "type": "number",
+      "unit": "people",
+      "min": 0,
+      "definition": "Explicitly reported count. Keep the observed time and applicable operating date; never infer a count from absent statements.",
+      "executive": false
+    },
+    {
+      "key": "rooms_running",
+      "label": "Rooms still running",
+      "type": "number",
+      "unit": "rooms",
+      "min": 0,
+      "definition": "Explicitly reported count. Keep the observed time and applicable operating date; never infer a count from absent statements.",
+      "executive": false
+    },
+    {
+      "key": "or_rn_available",
+      "label": "OR RN coverage reported",
+      "type": "number",
+      "unit": "people",
+      "min": 0,
+      "definition": "Explicitly reported count. Keep the observed time and applicable operating date; never infer a count from absent statements.",
+      "executive": false
+    },
+    {
+      "key": "or_cst_available",
+      "label": "OR CST coverage reported",
+      "type": "number",
+      "unit": "people",
+      "min": 0,
+      "definition": "Explicitly reported count. Keep the observed time and applicable operating date; never infer a count from absent statements.",
+      "executive": false
+    },
+    {
+      "key": "remaining_preop",
+      "label": "Cases remaining to PreOp",
+      "type": "number",
+      "unit": "cases",
+      "min": 0,
+      "definition": "Explicitly reported count. Keep the observed time and applicable operating date; never infer a count from absent statements.",
+      "executive": false
+    },
+    {
+      "key": "remaining_pacu",
+      "label": "Cases remaining to PACU",
+      "type": "number",
+      "unit": "cases",
+      "min": 0,
+      "definition": "Explicitly reported count. Keep the observed time and applicable operating date; never infer a count from absent statements.",
+      "executive": false
+    },
+    {
+      "key": "preop_staff",
+      "label": "PreOp staffing reported",
+      "type": "number",
+      "unit": "people",
+      "min": 0,
+      "definition": "Explicitly reported count. Keep the observed time and applicable operating date; never infer a count from absent statements.",
+      "executive": false
+    },
+    {
+      "key": "pacu_staff",
+      "label": "PACU staffing reported",
+      "type": "number",
+      "unit": "people",
+      "min": 0,
+      "definition": "Explicitly reported count. Keep the observed time and applicable operating date; never infer a count from absent statements.",
+      "executive": false
+    },
+    {
+      "key": "phase2_staff",
+      "label": "Phase 2 staffing reported",
+      "type": "number",
+      "unit": "people",
+      "min": 0,
+      "definition": "Explicitly reported count. Keep the observed time and applicable operating date; never infer a count from absent statements.",
+      "executive": false
+    },
+    {
+      "key": "escalation_flag",
+      "label": "Escalation flag reported",
+      "type": "boolean",
+      "unit": "",
+      "definition": "Explicitly confirmed escalation flag. An absent report is not false.",
+      "executive": true
+    },
+    {
+      "key": "source_confidence",
+      "label": "Source confidence reviewed",
+      "type": "text",
+      "unit": "",
+      "definition": "Reviewer-confirmed confidence label only. Do not infer confidence from a source type or assign a statistical probability.",
+      "executive": false
+    }
+  ],
+  "scheduleOverrides": {},
+  "automation": {
+    "transcriptDelivery": false,
+    "workbookRefresh": false,
+    "confirmation": false,
+    "morningBrief": false,
+    "audio": false,
+    "briefTime": "06:30"
+  },
+  "sources": [
+    {
+      "kind": "calendar",
+      "enabled": false,
+      "location": "",
+      "accessVerified": false
+    },
+    {
+      "kind": "transcript_email",
+      "enabled": false,
+      "location": "",
+      "accessVerified": false
+    },
+    {
+      "kind": "teams",
+      "enabled": false,
+      "location": "",
+      "accessVerified": false
+    },
+    {
+      "kind": "staffing",
+      "enabled": false,
+      "location": "",
+      "accessVerified": false
+    },
+    {
+      "kind": "forms",
+      "enabled": false,
+      "location": "",
+      "accessVerified": false
+    },
+    {
+      "kind": "vendor_trays",
+      "enabled": false,
+      "location": "",
+      "accessVerified": false
+    }
+  ],
+  "history": {
+    "sevenDayWindow": 7,
+    "severities": [
+      "HIGH",
+      "MEDIUM"
+    ],
+    "master": "one immutable row per closed day"
+  }
+}

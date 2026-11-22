@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "releaseStatus": "development-preview",
+  "artifactType": "action-map-not-importable-solution",
+  "instructions": "docs/NO-PYTHON-AUTOMATION.md",
+  "runtime": "scripts/RunReadinessNoPython.ts",
+  "singleWriter": true,
+  "trigger": {"type": "recurrence", "intervalMinutes": 15, "concurrency": 1, "enabled": false},
+  "requiredConnections": ["approved-file-storage", "excel-online-business"],
+  "optionalConnections": ["outlook", "teams", "graph-transcripts", "approved-extraction-assistant", "brief-delivery"],
+  "steps": [
+    {"id": "Read_profile", "action": "get_file_content", "configuration": "organization/readiness-profile.json"},
+    {"id": "Local_day", "action": "compose", "expression": "convertTimeZone(utcNow(),'UTC','REPLACE_WITH_WINDOWS_TIMEZONE','yyyy-MM-dd')"},
+    {"id": "Read_closing_dates", "action": "get_file_content", "configuration": "closing-dates.json"},
+    {"id": "List_reviewed_files", "action": "list_files", "pagination": true, "scope": "approved-reviewed-json-folder"},
+    {"id": "For_each_reviewed_file", "action": "serial_loop", "concurrency": 1, "children": [
+      {"id": "Read_record_file", "action": "get_file_content"},
+      {"id": "Ingest_and_refresh", "action": "excel_run_script", "parameters": {"profileJson": "decoded profile text", "reviewedRecordsJson": "decoded approved record array", "reportDate": "Local_day", "closeDatesJson": "[]", "blockScheduleJson": "", "readOnly": false}}
+    ]},
+    {"id": "Dates_to_try", "action": "compose", "expression": "union(json(outputs('Closing_dates_text')),createArray(formatDateTime(addDays(outputs('Local_day'),-1),'yyyy-MM-dd'),outputs('Local_day')))"},
+    {"id": "Refresh_and_close", "action": "excel_run_script", "parameters": {"profileJson": "decoded profile text", "reviewedRecordsJson": "[]", "reportDate": "Local_day", "closeDatesJson": "string(outputs('Dates_to_try'))", "blockScheduleJson": "optional decoded block schedule", "readOnly": false}},
+    {"id": "Save_closing_queue", "action": "update_file", "content": "JSON array of dates whose returned closing status is waiting"},
+    {"id": "Log_completion", "action": "append_run_metadata"}
+  ],
+  "failure": {"scriptRetries": 1, "afterSecondFailure": "record failure and optionally notify an approved recipient", "claimSuccessBeforeSave": false},
+  "sourceIntake": {"status": "tenant-configuration-required", "delayFromMeetingEndMinutes": 60, "routes": ["manual_vtt", "shared_folder", "transcript_email", "teams"], "reviewRequired": true, "writesWorkbook": false},
+  "briefing": {"enabled": false, "prompt": "prompts/leadership-brief.md", "spokenDeliveryImplemented": false},
+  "tenantImportVerified": false
+}

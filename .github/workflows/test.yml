@@ -20,4 +20,7 @@ jobs:
         with:
           node-version: '24'
       - run: python -m hospital_ops.readiness_demo
-      - run: node --test tests/office.test.mjs tests/readiness-office.test.mjs
+      - run: node setup/build.mjs
+      - run: git diff --exit-code -- setup/index.html setup/runtime.js setup/bundle-manifest.json scripts/RunReadinessNoPython.ts
+      - run: node --test tests/office.test.mjs tests/readiness-office.test.mjs tests/no-python.test.mjs tests/setup-package.test.mjs
+
